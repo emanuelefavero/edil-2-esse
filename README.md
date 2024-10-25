@@ -1,4 +1,4 @@
-# Edil 2 Esse
+# Edil 2 Esse Website
 
 Website for **Edil 2 Esse**, a construction company that operates in Livorno, Pisa and province (_Italy_)
 
@@ -23,3 +23,15 @@ To run the website locally, clone the repository and run the following commands:
 npm install
 npm run dev
 ```
+
+## License
+
+- [MIT](LICENSE.md)
+
+&nbsp;
+
+---
+
+&nbsp;
+
+[**Go To Top &nbsp; ⬆️**](#edil-2-esse-website)
