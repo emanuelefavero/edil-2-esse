@@ -4,7 +4,6 @@ import { useState } from 'react'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import Hamburger from 'hamburger-react'
 import { useDarkMode } from '@/hooks/useDarkMode'
-// import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 
 export default function DropdownMenuDemo() {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,7 +32,6 @@ export default function DropdownMenuDemo() {
           />
         </button>
       </DropdownMenu.Trigger>
-      {/* <HamburgerMenuIcon className='size-[40px] text-stone-700 dark:text-stone-200' /> */}
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
