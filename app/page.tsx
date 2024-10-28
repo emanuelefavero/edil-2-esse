@@ -1,13 +1,9 @@
-import DropdownMenu from '@/components/DropdownMenu'
-import Logo from '@/components/Logo'
+import Header from '@/components/Header'
 
 export default function Home() {
   return (
     <>
-      <header className='w-full flex justify-between items-center px-2 py-2 border-b border-stone-500/80'>
-        <Logo />
-        <DropdownMenu />
-      </header>
+      <Header />
       <h1>EDIL 2 ESSE</h1>
     </>
   )
