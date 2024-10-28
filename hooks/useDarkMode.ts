@@ -4,17 +4,14 @@ import { useState, useEffect } from 'react'
 
 export function useDarkMode() {
   // Define a state to keep track of dark mode
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check if the browser supports matchMedia and if dark mode is enabled
-    return (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    )
-  })
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    // Define a listener function that updates the state based on the media query
+    // Check if window is available and if dark mode is enabled
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    setIsDarkMode(mediaQuery.matches)
+
+    // Define a listener function that updates the state based on the media query
     const handleChange = (e: MediaQueryListEvent) => {
       setIsDarkMode(e.matches)
     }
