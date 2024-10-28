@@ -15,7 +15,7 @@ export default function DropdownMenuDemo() {
     <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)}>
       <DropdownMenu.Trigger asChild>
         <button
-          className='h-[40px] inline-flex items-center justify-center rounded-sm text-black dark:text-white outline-none focus:shadow-[0_0_0_1px] focus:shadow-stone-500/80 dark:focus:shadow-stone-500/80'
+          className='h-[40px] inline-flex items-center justify-center text-black dark:text-white rounded-sm outline-none focus:shadow-[0_0_0_1px] focus:shadow-stone-500/80 dark:focus:shadow-stone-500/80'
           aria-label='Open dropdown menu'
         >
           <Hamburger
