@@ -21,7 +21,15 @@ export default function DropdownMenuDemo() {
             toggled={isOpen}
             rounded
             duration={0.3}
-            color={isDarkMode ? '#e7e5e4' : '#44403c'}
+            color={
+              isDarkMode
+                ? isOpen
+                  ? '#d97706'
+                  : '#e7e5e4'
+                : isOpen
+                ? '#d97706'
+                : '#44403c'
+            }
           />
         </button>
       </DropdownMenu.Trigger>
