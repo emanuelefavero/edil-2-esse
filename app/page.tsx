@@ -6,7 +6,7 @@ export default function Home() {
       <Header />
 
       <main className='pt-14'>
-        <h1 className='bg-amber-600'>EDIL 2 ESSE</h1>
+        <h1 className='bg-stone-800 text-white px-2 pt-4 pb-2'>EDIL 2 ESSE</h1>
 
         <p className='max-w-[200px]'>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas,
