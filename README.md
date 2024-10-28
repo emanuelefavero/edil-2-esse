@@ -2,6 +2,8 @@
 
 Website for **Edil 2 Esse**, a construction company that operates in Livorno, Pisa and province (_Italy_)
 
+<img src="public/logo.png" alt="logo" width="250">
+
 > Company Info:
 >
 > - **VAT** (P IVA): 01790840498
