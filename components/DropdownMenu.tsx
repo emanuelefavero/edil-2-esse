@@ -25,7 +25,7 @@ export default function DropdownMenuDemo() {
             color={
               isDarkMode
                 ? isOpen
-                  ? '#d97706'
+                  ? '#f59e0b'
                   : '#e7e5e4'
                 : isOpen
                 ? '#d97706'
