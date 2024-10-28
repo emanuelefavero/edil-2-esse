@@ -38,7 +38,7 @@ export default function DropdownMenuDemo() {
       <DropdownMenu.Portal>
         <DropdownMenu.Content
           className='rounded-md bg-stone-100/90 dark:bg-[rgba(21,18,16,0.9)] backdrop-blur-md p-[5px] mr-2 shadow-sm shadow-stone-600/20 will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade border-[0.5px] border-stone-500/80'
-          sideOffset={1}
+          sideOffset={0}
         >
           {menuItems.map((item) => (
             <DropdownMenuItem key={item.id}>{item.label}</DropdownMenuItem>
