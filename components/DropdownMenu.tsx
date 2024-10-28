@@ -1,15 +1,22 @@
+'use client'
+
+import { useState } from 'react'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
-import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+import Hamburger from 'hamburger-react'
+// import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 
 export default function DropdownMenuDemo() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <DropdownMenu.Root>
+    <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)}>
       <DropdownMenu.Trigger asChild>
         <button
           className='inline-flex items-center justify-center px-[3.5px] rounded-sm text-black dark:text-white outline-none focus:shadow-[0_0_0_1px] focus:shadow-stone-500/80 dark:focus:shadow-stone-500/80 active:scale-95'
           aria-label='Open dropdown menu'
         >
-          <HamburgerMenuIcon className='size-[40px] text-stone-700 dark:text-stone-200' />
+          {/* <HamburgerMenuIcon className='size-[40px] text-stone-700 dark:text-stone-200' /> */}
+          <Hamburger toggled={isOpen} />
         </button>
       </DropdownMenu.Trigger>
 
