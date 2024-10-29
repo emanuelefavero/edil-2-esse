@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
   content: [
@@ -45,8 +46,26 @@ const config: Config = {
       backgroundImage: {
         'hero-image': "url('/hero-image.webp')",
       },
+
+      textShadow: {
+        sm: '0.25px 0.5px 0.25px var(--text-shadow)',
+        DEFAULT: '0.5px 1px 0.5px var(--text-shadow)',
+        lg: '1px 1.5px 1px var(--text-shadow)',
+        none: 'none',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 }
 export default config
