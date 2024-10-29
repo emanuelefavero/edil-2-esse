@@ -28,7 +28,7 @@ export default function Component({
         aria-label={ariaLabel}
         disabled={disabled}
         className={clsx(
-          'bg-yellow-700 border-[1px] border-amber-400 text-white shadow-[0.5px_0.5px_0.5px_0.8px] shadow-yellow-800/80 text-shadow-yellow font-[600] text-lg tracking-wide px-5 py-1.5 rounded-lg select-none hover:bg-yellow-600 duration-200 active:transform active:translate-y-0.5 active:scale-[0.99] active:shadow-none transition-all',
+          'bg-yellow-700 border-[1px] border-amber-400 text-white shadow-[0.5px_0.5px_0.5px_0.8px] shadow-yellow-800/80 text-shadow-yellow font-[600] text-lg tracking-wide px-5 py-1.5 rounded-lg select-none outline-none focus:bg-yellow-600 hover:bg-yellow-600 duration-200 active:transform active:translate-y-0.5 active:scale-[0.99] active:shadow-none transition-all',
           className,
           disabled && 'opacity-50 cursor-not-allowed'
         )}
