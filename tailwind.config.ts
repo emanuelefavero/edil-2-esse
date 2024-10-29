@@ -49,6 +49,7 @@ const config: Config = {
 
       textShadow: {
         sm: '0.25px 0.5px 0.25px var(--text-shadow)',
+        yellow: '0.25px 0.5px 0.25px rgba(133, 78, 14, 0.8)', // yellow-800/80
         DEFAULT: '0.5px 1px 0.5px var(--text-shadow)',
         lg: '1px 1.5px 1px var(--text-shadow)',
         none: 'none',
