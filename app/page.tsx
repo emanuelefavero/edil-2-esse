@@ -1,10 +1,11 @@
+import FullScreenPattern from '@/components/FullScreenPattern'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
 
 export default function Home() {
   return (
     <>
-      <div className='fixed inset-0 -z-10 bg-radial-pattern bg-[size:13px_13px]'></div>
+      <FullScreenPattern />
 
       <Header />
 
