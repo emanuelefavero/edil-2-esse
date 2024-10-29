@@ -2,6 +2,8 @@
 
 import Image from 'next/image'
 
+// TODO: Check if the current route is the home page, if so, reload the page, if not, navigate to the home page
+
 export default function Component() {
   return (
     <button
