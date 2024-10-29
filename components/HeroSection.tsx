@@ -3,9 +3,18 @@ import Button from '@/components/Button'
 export default function Component() {
   return (
     <section className='w-full h-[calc(100vh-104px)] pt-8 flex flex-col justify-center items-center gap-8 bg-hero-image bg-cover bg-center'>
-      <h1 className='text-white font-semibold text-2xl'>EDIL 2 ESSE</h1>
+      <div className='max-w-72 text-center'>
+        <div className='mb-2 text-lg'>EDIL 2 ESSE</div>
+        <h1 className='text-white font-semibold text-5xl leading-[3.3rem] mb-4'>
+          Impresa Edile Toscana
+        </h1>
+        <p className='font-[500] text-lg text-pretty'>
+          Servizi di ristrutturazione edilizia e costruzione di nuovi edifici
+          nelle zone di Pisa, Livorno e provincia.
+        </p>
+      </div>
 
-      <Button>Servizi</Button>
+      <Button>I NOSTRI SERVIZI</Button>
     </section>
   )
 }
