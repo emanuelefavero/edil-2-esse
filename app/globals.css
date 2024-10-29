@@ -6,13 +6,19 @@
   --background: #fafaf9;
   --foreground: #292524;
   --text-shadow: rgba(21, 18, 16, 0.6);
+  --selection: rgba(234, 178, 8, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #151210;
     --foreground: #f5f5f4;
+    --selection: rgba(202, 139, 4, 0.4);
   }
+}
+
+::selection {
+  background: var(--selection);
 }
 
 body {
