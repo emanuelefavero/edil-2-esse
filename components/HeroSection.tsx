@@ -2,8 +2,8 @@ import Button from '@/components/Button'
 
 export default function Component() {
   return (
-    <section className='w-full h-[calc(100vh-104px)] min-h-[563px] pt-16 pb-4 flex flex-col justify-center items-center gap-10 bg-hero-image bg-cover bg-center'>
-      <div className='max-w-72 text-center'>
+    <section className='w-full h-[calc(100vh-104px)] min-h-[667px] max-h-[900px] pt-16 pb-4 px-10 flex flex-col justify-center items-center gap-10 bg-hero-image bg-cover bg-center'>
+      <div className='text-center max-w-prose'>
         <div className='mb-2 text-lg text-white text-shadow'>EDIL 2 ESSE</div>
         <h1 className='text-white font-semibold text-5xl leading-[3.3rem] mb-4 text-shadow-lg'>
           Impresa Edile Toscana
