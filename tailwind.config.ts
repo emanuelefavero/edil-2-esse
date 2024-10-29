@@ -12,6 +12,7 @@ const config: Config = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+
       keyframes: {
         slideDownAndFade: {
           from: { opacity: '0', transform: 'translateY(-2px)' },
@@ -30,6 +31,7 @@ const config: Config = {
           to: { opacity: '1', transform: 'translateX(0)' },
         },
       },
+
       animation: {
         slideDownAndFade:
           'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
@@ -38,6 +40,10 @@ const config: Config = {
         slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideRightAndFade:
           'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+
+      backgroundImage: {
+        'hero-image': "url('/hero-image.webp')",
       },
     },
   },
