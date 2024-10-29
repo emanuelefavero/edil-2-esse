@@ -1,5 +1,4 @@
 import HeroSection from '@/components/HeroSection'
-import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
       </section>
 
       <section className='flex flex-col justify-center items-center py-40'>
-        <Link href='/new-page'>New Page</Link>
         <p className='w-full flex justify-center items-center max-w-screen-2xl'>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
           laborum libero, neque corrupti optio nesciunt. Deserunt, commodi
