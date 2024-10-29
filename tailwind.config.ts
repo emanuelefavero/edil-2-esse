@@ -60,6 +60,12 @@ const config: Config = {
 
       backgroundImage: {
         'hero-image': "url('/hero-image.webp')",
+        'radial-pattern':
+          'radial-gradient(rgba(202, 139, 4, 0.5) 0.65px, rgba(120, 113, 108, 0) 0.65px)',
+      },
+
+      backgroundSize: {
+        '13': '13px 13px',
       },
 
       textShadow: {
