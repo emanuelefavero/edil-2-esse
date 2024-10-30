@@ -17,7 +17,7 @@ export default function Component() {
               ${item.id === 2 ? 'hidden sm:flex' : 'flex'} 
               justify-center items-center`}
             >
-              <div className='text-5xl font-bold text-shadow-yellow select-none'>
+              <div className='hidden 5xs:block text-5xl font-bold text-shadow-yellow select-none'>
                 {item.value}
                 <span
                   className={`relative -top-2 ml-0.5 ${
@@ -28,6 +28,13 @@ export default function Component() {
                 </span>
               </div>
               <div className='text-sm text-shadow-yellow ml-4 select-none'>
+                <span
+                  className={`${
+                    item.id === 1 ? 'inline 5xs:hidden' : 'hidden'
+                  }`}
+                >
+                  35+{' '}
+                </span>
                 {item.label}
               </div>
             </li>
