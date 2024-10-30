@@ -5,7 +5,7 @@ export default function Component() {
   return (
     <>
       <ZigZagBorder />
-      <section className='bg-yellow-600 text-white min-h-[130px] px-8 2xl:px-16 py-8 flex justify-center items-center font-semibold'>
+      <section className='min-h-[130px] bg-yellow-600 text-white border-b-[2.5px] border-yellow-700/60 dark:border-yellow-700/80 px-8 2xl:px-16 py-8 flex justify-center items-center font-semibold'>
         <ul className='w-full max-w-screen-2xl flex items-center justify-center'>
           {bannerItems.map((item) => (
             <li
