@@ -1,3 +1,4 @@
+import Banner from '@/components/Banner'
 import HeroSection from '@/components/HeroSection'
 
 export default function Home() {
@@ -5,11 +6,7 @@ export default function Home() {
     <>
       <HeroSection />
 
-      {/* TODO: Replace the following content with banner */}
-      <section className='bg-yellow-600 text-white h-[150px] flex justify-center items-center text-5xl font-semibold'>
-        Banner
-      </section>
-
+      <Banner />
       <section className='flex flex-col justify-center items-center py-40'>
         <p className='w-full flex justify-center items-center max-w-screen-2xl'>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
