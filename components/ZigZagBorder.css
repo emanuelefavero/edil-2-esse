@@ -7,9 +7,9 @@
   width: 100%;
   content: ' ';
 
-  background: linear-gradient(-45deg, #ca8a04 16px, transparent 0),
-    linear-gradient(45deg, #ca8a04 16px, transparent 0);
-  background-size: 32px 32px;
-  top: -26px;
-  height: 32px;
+  background: linear-gradient(-45deg, #ca8a04 4px, transparent 0),
+    linear-gradient(45deg, #ca8a04 4px, transparent 0);
+  background-size: 8px 8px;
+  top: -7px;
+  height: 8px;
 }
