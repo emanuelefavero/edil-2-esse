@@ -17,7 +17,7 @@ export default function Component() {
               ${item.id === 2 ? 'hidden sm:flex' : 'flex'} 
               justify-center items-center`}
             >
-              <div className='text-5xl font-bold text-shadow-yellow'>
+              <div className='text-5xl font-bold text-shadow-yellow select-none'>
                 {item.value}
                 <span
                   className={`relative -top-2 ml-0.5 ${
@@ -27,7 +27,7 @@ export default function Component() {
                   {item.symbol}
                 </span>
               </div>
-              <div className='text-sm text-shadow-yellow ml-4'>
+              <div className='text-sm text-shadow-yellow ml-4 select-none'>
                 {item.label}
               </div>
             </li>
