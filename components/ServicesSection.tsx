@@ -1,5 +1,4 @@
 import { servicesItems, IServicesItem } from '@/data/servicesItems'
-import GiDrillIcon from '@/components/icons/GiDrillIcon'
 
 export default function Component() {
   return (
@@ -10,6 +9,7 @@ export default function Component() {
   )
 }
 
+// * Title
 function ServicesTitle() {
   return (
     <div className='xl:scale-125'>
@@ -27,6 +27,7 @@ function ServicesTitle() {
   )
 }
 
+// * List
 function ServicesList() {
   return (
     <ul className='w-full grid grid-cols-1 gap-8 mt-16 bg-red-500'>
@@ -37,25 +38,12 @@ function ServicesList() {
   )
 }
 
-interface ServiceCardProps {
-  item: IServicesItem
-}
-
-function ServiceCard({ item }: ServiceCardProps) {
-  const Icon = () => {
-    const className = 'w-20 h-20'
-    switch (item.icon) {
-      case 'drill':
-        return <GiDrillIcon className={className} />
-      default:
-        return <GiDrillIcon className={className} />
-    }
-  }
-
+// * Card
+function ServiceCard({ item }: { item: IServicesItem }) {
   return (
     <li className='flex flex-col items-center justify-center bg-red-500'>
       <div>
-        <Icon />
+        <item.icon className='w-20' />
       </div>
       <h3 className='mt-4 text-lg font-semibold text-center'>{item.title}</h3>
       <ul className='mt-2 text-sm text-center'>
