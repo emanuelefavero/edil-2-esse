@@ -30,7 +30,7 @@ function ServicesTitle() {
 // * List
 function ServicesList() {
   return (
-    <ul className='w-full grid grid-cols-1 gap-8 mt-16 bg-red-500'>
+    <ul className='w-full flex flex-wrap justify-center items-center gap-8 mt-16'>
       {servicesItems.map((item) => (
         <ServiceCard key={item.id} item={item} />
       ))}
@@ -39,10 +39,11 @@ function ServicesList() {
 }
 
 // * Card
+// TODO add shadow to card (e.g. shadow-[1px_1px_3px_1px] shadow-yellow-700/20)
 function ServiceCard({ item }: { item: IServicesItem }) {
   return (
-    <li className='flex flex-col items-center justify-center bg-red-500'>
-      <div>
+    <li className='w-fit flex flex-col items-center justify-center bg-stone-50 border-2 border-yellow-700/35 rounded-3xl'>
+      <div className='bg-amber-100/50 border-b border-yellow-700/35 w-full flex justify-center items-center px-2 py-7 rounded-t-3xl'>
         <item.icon className='w-20' />
       </div>
       <h3 className='mt-4 text-lg font-semibold text-center'>{item.title}</h3>

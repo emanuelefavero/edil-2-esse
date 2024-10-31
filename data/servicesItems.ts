@@ -20,4 +20,24 @@ export const servicesItems = [
     // icon: 'drill',
     icon: GiDrillIcon,
   },
+  {
+    id: 2,
+    title: 'Ristrutturazione Interni ed Esterni',
+    list: [
+      'Riparazioni murarie, intonaci e tinteggiature',
+      'Ristrutturazione bagni, cucine, facciate e tetti',
+    ],
+    // icon: 'drill',
+    icon: GiDrillIcon,
+  },
+  {
+    id: 3,
+    title: 'Ristrutturazione Interni ed Esterni',
+    list: [
+      'Riparazioni murarie, intonaci e tinteggiature',
+      'Ristrutturazione bagni, cucine, facciate e tetti',
+    ],
+    // icon: 'drill',
+    icon: GiDrillIcon,
+  },
 ]
