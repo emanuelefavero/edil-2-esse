@@ -1,11 +1,8 @@
-import { ReactNode } from 'react'
-import GiDrillIcon from '@/components/icons/GiDrillIcon'
-
 export interface IServicesItem {
   id: number
   title: string
   list: string[]
-  icon: ReactNode
+  icon: string
 }
 
 export const servicesItems = [
@@ -16,6 +13,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    icon: GiDrillIcon,
+    icon: 'drill',
   },
 ]

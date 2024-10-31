@@ -1,9 +1,11 @@
-import GiDrillIcon from './icons/GiDrillIcon'
+import { servicesItems, IServicesItem } from '@/data/servicesItems'
+import GiDrillIcon from '@/components/icons/GiDrillIcon'
 
 export default function Component() {
   return (
     <section className='w-full max-w-screen-2xl flex items-center justify-center flex-col px-8 py-20'>
       <ServicesTitle />
+      <ServicesList />
     </section>
   )
 }
@@ -25,4 +27,42 @@ function ServicesTitle() {
   )
 }
 
-function ServicesList() {}
+function ServicesList() {
+  return (
+    <ul className='w-full grid grid-cols-1 gap-8 mt-16 bg-red-500'>
+      {servicesItems.map((item) => (
+        <ServiceCard key={item.id} item={item} />
+      ))}
+    </ul>
+  )
+}
+
+interface ServiceCardProps {
+  item: IServicesItem
+}
+
+function ServiceCard({ item }: ServiceCardProps) {
+  const Icon = () => {
+    const className = 'w-20 h-20'
+    switch (item.icon) {
+      case 'drill':
+        return <GiDrillIcon className={className} />
+      default:
+        return <GiDrillIcon className={className} />
+    }
+  }
+
+  return (
+    <li className='flex flex-col items-center justify-center bg-red-500'>
+      <div>
+        <Icon />
+      </div>
+      <h3 className='mt-4 text-lg font-semibold text-center'>{item.title}</h3>
+      <ul className='mt-2 text-sm text-center'>
+        {item.list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </li>
+  )
+}
