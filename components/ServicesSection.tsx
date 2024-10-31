@@ -51,7 +51,12 @@ function ServiceCard({ item }: { item: IServicesItem }) {
         <h3 className='text-xl font-semibold'>{item.title}</h3>
         <ul className='mt-4 w-full flex flex-col gap-2 items-start text-base'>
           {item.list.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index} className='w-full pl-3 flex items-center'>
+              {/* Add a circle with yellow 700 tailwind color */}
+              <span className='inline-block w-2 h-2 bg-yellow-600 rounded-full mr-3'></span>
+
+              <span className='text-stone-600'>{item}</span>
+            </li>
           ))}
         </ul>
       </div>
