@@ -2,7 +2,7 @@ import { servicesItems, IServicesItem } from '@/data/servicesItems'
 
 export default function Component() {
   return (
-    <section className='w-full max-w-screen-2xl flex items-center justify-center flex-col px-8 py-20'>
+    <section className='w-full flex items-center justify-center flex-col px-8 py-40'>
       <ServicesTitle />
       <ServicesList />
     </section>
@@ -30,7 +30,7 @@ function ServicesTitle() {
 // * List
 function ServicesList() {
   return (
-    <ul className='w-full flex flex-wrap justify-center items-center gap-8 mt-20'>
+    <ul className='w-full max-w-screen-xl flex flex-wrap justify-center items-center gap-8 mt-20'>
       {servicesItems.map((item) => (
         <ServiceCard key={item.id} item={item} />
       ))}
