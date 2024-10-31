@@ -30,7 +30,7 @@ function ServicesTitle() {
 // * List
 function ServicesList() {
   return (
-    <ul className='w-full flex flex-wrap justify-center items-center gap-8 mt-16'>
+    <ul className='w-full flex flex-wrap justify-center items-center gap-8 mt-20'>
       {servicesItems.map((item) => (
         <ServiceCard key={item.id} item={item} />
       ))}
@@ -43,15 +43,17 @@ function ServicesList() {
 function ServiceCard({ item }: { item: IServicesItem }) {
   return (
     <li className='w-fit flex flex-col items-center justify-center bg-stone-50 border-2 border-yellow-700/35 rounded-3xl'>
-      <div className='bg-amber-100/50 border-b border-yellow-700/35 w-full flex justify-center items-center px-2 py-7 rounded-t-3xl'>
+      <div className='bg-amber-50 border-b border-yellow-700/35 w-full flex justify-center items-center px-2 py-8 rounded-t-3xl'>
         <item.icon className='w-20' />
       </div>
-      <h3 className='mt-4 text-lg font-semibold text-center'>{item.title}</h3>
-      <ul className='mt-2 text-sm text-center'>
-        {item.list.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <div className='px-4 pt-4 pb-7'>
+        <h3 className='text-xl font-semibold'>{item.title}</h3>
+        <ul className='mt-4 text-base text-center'>
+          {item.list.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </li>
   )
 }
