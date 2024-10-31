@@ -43,17 +43,17 @@ function ServicesList() {
 // TODO fix colors on dark theme
 function ServiceCard({ item }: { item: IServicesItem }) {
   return (
-    <li className='w-fit flex flex-col items-center justify-center bg-stone-50 border-2 border-yellow-700/35 rounded-3xl'>
+    <li className='w-fit max-w-[378px] flex flex-col items-center justify-center bg-stone-50 border-2 border-yellow-700/35 rounded-3xl'>
       <div className='bg-amber-50 border-b border-yellow-700/35 w-full flex justify-center items-center px-2 py-8 rounded-t-3xl'>
         <item.icon className='w-20' />
       </div>
-      <div className='px-5 pt-4 pb-7'>
+      <div className='px-5 pt-4 pb-6 rounded-b-3xl'>
         <h3 className='text-xl font-semibold'>{item.title}</h3>
         <ul className='mt-4 w-full flex flex-col gap-2 items-start text-base'>
           {item.list.map((item, index) => (
             <li key={index} className='w-full pl-3 flex items-center'>
-              {/* Add a circle with yellow 700 tailwind color */}
-              <span className='inline-block w-2 h-2 bg-yellow-600 rounded-full mr-3'></span>
+              {/* Circle */}
+              <span className='inline-block flex-shrink-0 w-2 h-2 bg-yellow-600 rounded-full mr-3'></span>
 
               <span className='text-stone-600'>{item}</span>
             </li>
