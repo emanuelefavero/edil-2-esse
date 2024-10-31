@@ -1,7 +1,17 @@
 export default function Component() {
   return (
     <section className='w-full max-w-screen-2xl flex items-center justify-center flex-col px-8 py-20'>
-      <h2>Servizi</h2>
+      <div>
+        <div className='flex justify-center items-center'>
+          <div className='text-yellow-700 dark:text-yellow-500 font-semibold whitespace-nowrap mr-3'>
+            Cosa offriamo
+          </div>
+          <div className='bg-yellow-700 dark:bg-yellow-500 h-0.5 w-full'></div>
+        </div>
+        <h2 className='text-[2rem] leading-10 font-bold uppercase text-center'>
+          I Nostri Servizi
+        </h2>
+      </div>
     </section>
   )
 }
