@@ -40,15 +40,16 @@ function ServicesList() {
 
 // * Card
 // TODO add shadow to card (e.g. shadow-[1px_1px_3px_1px] shadow-yellow-700/20)
+// TODO fix colors on dark theme
 function ServiceCard({ item }: { item: IServicesItem }) {
   return (
     <li className='w-fit flex flex-col items-center justify-center bg-stone-50 border-2 border-yellow-700/35 rounded-3xl'>
       <div className='bg-amber-50 border-b border-yellow-700/35 w-full flex justify-center items-center px-2 py-8 rounded-t-3xl'>
         <item.icon className='w-20' />
       </div>
-      <div className='px-4 pt-4 pb-7'>
+      <div className='px-5 pt-4 pb-7'>
         <h3 className='text-xl font-semibold'>{item.title}</h3>
-        <ul className='mt-4 text-base text-center'>
+        <ul className='mt-4 w-full flex flex-col gap-2 items-start text-base'>
           {item.list.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
