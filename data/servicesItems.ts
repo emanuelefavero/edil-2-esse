@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import GiDrillIcon from '@/components/icons/GiDrillIcon'
+import GiBrickWallIcon from '@/components/icons/GiBrickWallIcon'
 
 export interface IServicesItem {
   id: number
@@ -25,7 +26,7 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    icon: GiDrillIcon,
+    icon: GiBrickWallIcon,
   },
   {
     id: 3,
