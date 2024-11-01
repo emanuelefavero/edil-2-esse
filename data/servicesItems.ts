@@ -4,6 +4,7 @@ import GiBrickWallIcon from '@/components/icons/GiBrickWallIconIcon'
 import BsBuildingsIcon from '@/components/icons/BsBuildingsIcon'
 import BsThermometerSunIcon from '@/components/icons/BsThermometerSunIcon'
 import BsDoorClosedIcon from '@/components/icons/BsDoorClosedIcon'
+import MdOutlineElectricalServicesIcon from '@/components/icons/MdOutlineElectricalServicesIcon'
 
 export interface IServicesItem {
   id: number
@@ -65,6 +66,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    icon: GiDrillIcon,
+    icon: MdOutlineElectricalServicesIcon,
   },
 ]
