@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
-import GiDrillIcon from '@/components/icons/GiDrillIcon'
-import GiBrickWallIcon from '@/components/icons/GiBrickWallIcon'
+import GiDrillIcon from '@/components/icons/GiDrillIconIcon'
+import GiBrickWallIcon from '@/components/icons/GiBrickWallIconIcon'
 import BsBuildingsIcon from '@/components/icons/BsBuildingsIcon'
-import BsThermometerSun from '@/components/icons/BsThermometerSun'
-import BsDoorClosed from '@/components/icons/BsDoorClosed'
+import BsThermometerSunIcon from '@/components/icons/BsThermometerSunIcon'
+import BsDoorClosedIcon from '@/components/icons/BsDoorClosedIcon'
 
 export interface IServicesItem {
   id: number
@@ -47,7 +47,7 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    icon: BsThermometerSun,
+    icon: BsThermometerSunIcon,
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    icon: BsDoorClosed,
+    icon: BsDoorClosedIcon,
   },
   {
     id: 6,
