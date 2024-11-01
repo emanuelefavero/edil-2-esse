@@ -5,7 +5,6 @@ export interface IServicesItem {
   id: number
   title: string
   list: string[]
-  // icon: string
   icon: (props: { className: string }) => ReactNode
 }
 
@@ -17,7 +16,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    // icon: 'drill',
     icon: GiDrillIcon,
   },
   {
@@ -27,7 +25,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    // icon: 'drill',
     icon: GiDrillIcon,
   },
   {
@@ -37,7 +34,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    // icon: 'drill',
     icon: GiDrillIcon,
   },
   {
@@ -47,7 +43,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    // icon: 'drill',
     icon: GiDrillIcon,
   },
   {
@@ -57,7 +52,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    // icon: 'drill',
     icon: GiDrillIcon,
   },
   {
@@ -67,7 +61,6 @@ export const servicesItems = [
       'Riparazioni murarie, intonaci e tinteggiature',
       'Ristrutturazione bagni, cucine, facciate e tetti',
     ],
-    // icon: 'drill',
     icon: GiDrillIcon,
   },
 ]
