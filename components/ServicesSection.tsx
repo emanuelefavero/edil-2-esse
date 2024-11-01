@@ -46,7 +46,13 @@ function ServiceCard({ item }: { item: IServicesItem }) {
         <item.icon className='w-20' />
       </div>
       <div className='px-5 pt-4 pb-6 rounded-b-3xl'>
-        <h3 className='text-xl font-semibold'>{item.title}</h3>
+        <h3
+          className={`${
+            item.title.length > 33 ? 'text-lg' : 'text-xl'
+          } font-semibold`}
+        >
+          {item.title}
+        </h3>
         <ul className='mt-4 w-full flex flex-col gap-2 items-start text-base'>
           {item.list.map((item, index) => (
             <li key={index} className='w-full pl-3 flex items-start'>

@@ -25,19 +25,19 @@ export const servicesItems = [
   },
   {
     id: 2,
-    title: 'Ristrutturazione Interni ed Esterni',
+    title: 'Pavimentazioni e rivestimenti',
     list: [
-      'Riparazioni murarie, intonaci e tinteggiature',
-      'Ristrutturazione bagni, cucine, facciate e tetti',
+      'Installazione di pavimenti in ceramica, parquet o pietra',
+      'Rivestimenti per bagni, cucine, e altre aree della casa',
     ],
     icon: GiBrickWallIcon,
   },
   {
     id: 3,
-    title: 'Ristrutturazione Interni ed Esterni',
+    title: 'Costruzione e manutenzione di edifici',
     list: [
-      'Riparazioni murarie, intonaci e tinteggiature',
-      'Ristrutturazione bagni, cucine, facciate e tetti',
+      'Interventi di manutenzione (riparazioni di tetti, grondaie e serramenti).',
+      'Realizzazione opere murarie',
     ],
     icon: BsBuildingsIcon,
   },
