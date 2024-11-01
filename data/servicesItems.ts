@@ -34,37 +34,37 @@ export const servicesItems = [
   },
   {
     id: 3,
-    title: 'Costruzione e manutenzione di edifici',
+    title: 'Manutenzione di edifici',
     list: [
       'Interventi di manutenzione (riparazioni di tetti, grondaie e serramenti).',
-      'Realizzazione opere murarie',
+      'Realizzazione opere murarie interne ed esterne',
     ],
     icon: BsBuildingsIcon,
   },
   {
     id: 4,
-    title: 'Ristrutturazione Interni ed Esterni',
+    title: 'Isolamento termico e fotovoltaico',
     list: [
-      'Riparazioni murarie, intonaci e tinteggiature',
-      'Ristrutturazione bagni, cucine, facciate e tetti',
+      'Applicazione di cappotti termici per il risparmio energetico',
+      'Installazione di impianti fotovoltaici',
     ],
     icon: BsThermometerSunIcon,
   },
   {
     id: 5,
-    title: 'Ristrutturazione Interni ed Esterni',
+    title: 'Installazione di infissi e serramenti',
     list: [
-      'Riparazioni murarie, intonaci e tinteggiature',
-      'Ristrutturazione bagni, cucine, facciate e tetti',
+      'Montaggio e sostituzione di finestre, porte e portoni',
+      "Attenzione all'efficienza energetica",
     ],
     icon: BsDoorClosedIcon,
   },
   {
     id: 6,
-    title: 'Ristrutturazione Interni ed Esterni',
+    title: 'Impianti idraulici e elettrici',
     list: [
-      'Riparazioni murarie, intonaci e tinteggiature',
-      'Ristrutturazione bagni, cucine, facciate e tetti',
+      'Interventi su impianti idrici ed elettrici',
+      'Allacciamento di sanitari e lavori di ammodernamento',
     ],
     icon: MdOutlineElectricalServicesIcon,
   },
