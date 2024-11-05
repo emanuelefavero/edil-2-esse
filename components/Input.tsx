@@ -39,6 +39,7 @@ export default function Component({
       </label>
       <input
         type={type}
+        id={name}
         name={name}
         className={clsx(
           'w-full px-2.5 py-2 font-medium dark:bg-stone-800 text-stone-700 dark:text-stone-200 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 dark:focus:border-yellow-700 placeholder:text-stone-400 dark:placeholder:text-stone-500',
