@@ -6,13 +6,11 @@ export default function Component() {
   // TODO Add form submission success and error messages
   // TODO Add form submission loading state with useFormStatus hook
   // TODO Create Input components for name, phone, email
+  // TODO fix responsiveness on small screens
 
   return (
-    <div className='flex justify-center mt-16'>
-      <form
-        action={sendEstimateRequestEmail}
-        className='w-full max-w-screen-lg'
-      >
+    <div className='w-full flex justify-center mt-16'>
+      <form action={sendEstimateRequestEmail} className='w-full max-w-[788px]'>
         {/* Flex container for inputs */}
         <div className='flex flex-wrap -mx-2 mb-4'>
           <div className='w-full md:w-1/2 px-2 mb-4'>
