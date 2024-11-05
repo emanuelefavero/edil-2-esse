@@ -30,7 +30,7 @@ function ServicesTitle() {
 // * List
 function ServicesList() {
   return (
-    <ul className='w-full max-w-screen-xl flex flex-wrap justify-center items-center gap-8 mt-20'>
+    <ul className='w-full max-w-screen-xl flex flex-wrap justify-center items-center gap-8 mt-28'>
       {servicesItems.map((item) => (
         <ServiceCard key={item.id} item={item} />
       ))}
