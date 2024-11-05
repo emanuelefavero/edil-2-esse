@@ -9,11 +9,11 @@ export default function Component() {
   // TODO fix responsiveness on small screens
 
   return (
-    <div className='w-full flex justify-center mt-16'>
+    <div className='w-full flex justify-center mt-20'>
       <form action={sendEstimateRequestEmail} className='w-full max-w-[788px]'>
         {/* Flex container for inputs */}
-        <div className='flex flex-wrap -mx-2 mb-4'>
-          <div className='w-full md:w-1/2 px-2 mb-4'>
+        <div className='flex flex-wrap -mx-2 mb-5'>
+          <div className='w-full md:w-1/2 px-2 mb-5'>
             <label
               htmlFor='name'
               className='block text-sm font-medium text-stone-700 dark:text-stone-200 mb-2'
@@ -29,7 +29,7 @@ export default function Component() {
               required
             />
           </div>
-          <div className='w-full md:w-1/2 px-2 mb-4'>
+          <div className='w-full md:w-1/2 px-2 mb-5'>
             <label
               htmlFor='phone'
               className='block text-sm font-medium text-stone-700 dark:text-stone-200 mb-2'
@@ -81,10 +81,10 @@ export default function Component() {
         </div>
 
         {/* Submit button */}
-        <div className='flex justify-end mt-4'>
+        <div className='flex justify-end mt-5'>
           <button
             type='submit'
-            className='w-full md:w-1/2 p-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-500'
+            className='w-full md:w-1/2 max-w-[300px] p-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-500'
           >
             Invia richiesta
           </button>
