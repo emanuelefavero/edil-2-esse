@@ -1,7 +1,7 @@
 import { sendEstimateRequestEmail } from '@/app/actions'
+import Button from '@/components/Button'
 
 export default function Component() {
-  // TODO add Button component as submit button
   // TODO Add form validation
   // TODO Add form submission success and error messages
   // TODO Add form submission loading state with useFormStatus hook
@@ -82,12 +82,12 @@ export default function Component() {
 
         {/* Submit button */}
         <div className='flex justify-end mt-5'>
-          <button
+          <Button
             type='submit'
-            className='w-full md:w-1/2 md:max-w-[300px] p-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-500'
+            className='w-full xs:max-w-fit text-sm 5xs:text-md 3xs:text-lg'
           >
-            Invia richiesta
-          </button>
+            Invia <span className='hidden 3xs:inline'>richiesta</span>
+          </Button>
         </div>
       </form>
     </div>
