@@ -26,7 +26,7 @@ export default function Component() {
             <input
               type='text'
               name='name'
-              className='w-full p-2 font-medium border border-stone-500/35 rounded-lg'
+              className='w-full p-2 font-medium border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600'
               placeholder='Il tuo Nome'
               required
             />
@@ -41,7 +41,7 @@ export default function Component() {
             <input
               type='tel'
               name='phone'
-              className='w-full p-2 font-medium border border-stone-500/35 rounded-lg'
+              className='w-full p-2 font-medium border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600'
               placeholder='Il tuo numero di telefono'
             />
           </div>
@@ -55,7 +55,7 @@ export default function Component() {
             <input
               type='email'
               name='email'
-              className='w-full p-2 font-medium border border-stone-500/35 rounded-lg'
+              className='w-full p-2 font-medium border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600'
               placeholder='La tua email'
               required
             />
@@ -72,7 +72,7 @@ export default function Component() {
           </label>
           <textarea
             name='message'
-            className='w-full p-2 font-medium border border-stone-500/35 rounded-lg'
+            className='w-full p-2 font-medium border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600'
             rows={4}
             placeholder='Il tuo messaggio'
             required
