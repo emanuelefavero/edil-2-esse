@@ -1,7 +1,6 @@
 import EstimateForm from '@/components/EstimateForm'
 
 export default function Component() {
-  // TODO Style the estimate form section (see figma design)
   return (
     <section className='bg-stone-100 text-stone-800 border-b-[2.5px] border-yellow-700/60 dark:border-yellow-700/80 px-8 2xl:px-16 py-36 flex justify-center items-center font-semibold'>
       <div className='w-full max-w-screen-2xl flex flex-col items-center justify-center'>
