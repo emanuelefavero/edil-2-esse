@@ -84,7 +84,7 @@ export default function Component() {
         <div className='flex justify-end mt-5'>
           <button
             type='submit'
-            className='w-full md:w-1/2 max-w-[300px] p-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-500'
+            className='w-full md:w-1/2 md:max-w-[300px] p-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-500'
           >
             Invia richiesta
           </button>
