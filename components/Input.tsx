@@ -11,6 +11,7 @@ interface Props {
   ref?: Ref<HTMLInputElement>
   disabled?: boolean
   className?: string
+  autocomplete?: 'on' | 'off'
 }
 
 export default function Component({
@@ -23,6 +24,7 @@ export default function Component({
   ref,
   disabled = false,
   className,
+  autocomplete = 'on',
 }: Props) {
   return (
     <div className='w-full md:w-1/2 px-2 mb-5'>
@@ -48,6 +50,7 @@ export default function Component({
         required={required}
         pattern={pattern}
         disabled={disabled}
+        autoComplete={autocomplete}
       />
     </div>
   )
