@@ -47,6 +47,7 @@ export default function Component({
         placeholder={placeholder}
         required={required}
         pattern={pattern}
+        disabled={disabled}
       />
     </div>
   )
