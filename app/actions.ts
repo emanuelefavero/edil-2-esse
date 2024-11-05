@@ -5,6 +5,7 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function sendEstimateRequestEmail(formData: FormData) {
+  // TODO add form validation
   const customDomainEmail = process.env.CUSTOM_DOMAIN_EMAIL as string
   const name = formData.get('name') as string
   const email = formData.get('email') as string
