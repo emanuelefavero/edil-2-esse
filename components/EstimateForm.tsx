@@ -21,7 +21,7 @@ export default function Component() {
               htmlFor='name'
               className='block text-sm font-medium text-stone-700 mb-2'
             >
-              Nome
+              Nome <span className='text-yellow-600'>*</span>
             </label>
             <input
               type='text'
@@ -50,7 +50,7 @@ export default function Component() {
               htmlFor='email'
               className='block text-sm font-medium text-stone-700 mb-2'
             >
-              Email
+              Email <span className='text-yellow-600'>*</span>
             </label>
             <input
               type='email'
@@ -68,7 +68,7 @@ export default function Component() {
             htmlFor='message'
             className='block text-sm font-medium text-stone-700 mb-2'
           >
-            Messaggio
+            Messaggio <span className='text-yellow-600'>*</span>
           </label>
           <textarea
             name='message'
