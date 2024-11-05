@@ -41,7 +41,7 @@ export default function Component() {
               type='tel'
               name='phone'
               className='w-full p-2 font-medium text-stone-700 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 placeholder:text-stone-400'
-              placeholder='🇮🇹 Il tuo numero di telefono'
+              placeholder='Il tuo numero di telefono'
               pattern='^(\+39\s?)?((3\d{2}\s?\d{6,7})|(0\d{1,4}\s?\d{5,10}))$'
             />
           </div>
