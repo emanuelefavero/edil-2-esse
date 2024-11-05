@@ -2,17 +2,16 @@ import { sendEstimateRequestEmail } from '@/app/actions'
 import Button from '@/components/Button'
 
 export default function Component() {
-  // TODO Add form validation
-  // TODO Add form submission success and error messages
   // TODO Add form submission loading state with useFormStatus hook
-  // TODO Create Input components for name, phone, email
-  // TODO fix responsiveness on small screens
+  // TODO Add form validation client and server side (simply use html and css for client side?)
+  // TODO Add form submission success and error messages
+  // TODO Create Input and Label components for name, phone, email
 
   return (
     <div className='w-full flex justify-center mt-20'>
       <form action={sendEstimateRequestEmail} className='w-full max-w-[788px]'>
         {/* Flex container for inputs */}
-        <div className='flex flex-wrap -mx-2 mb-5'>
+        <div className='flex flex-wrap -mx-2'>
           <div className='w-full md:w-1/2 px-2 mb-5'>
             <label
               htmlFor='name'
@@ -44,7 +43,7 @@ export default function Component() {
               pattern='^(\+39\s?)?((3\d{2}\s?\d{6,7})|(0\d{1,4}\s?\d{5,10}))$'
             />
           </div>
-          <div className='w-full md:w-1/2 px-2'>
+          <div className='w-full md:w-1/2 px-2 mb-5'>
             <label
               htmlFor='email'
               className='block text-sm font-medium text-stone-700 dark:text-stone-200 mb-2'
