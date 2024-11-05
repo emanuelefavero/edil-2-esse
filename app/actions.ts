@@ -20,7 +20,7 @@ export async function sendEstimateRequestEmail(formData: FormData) {
       text: `
         Nome: ${name}
         Email: ${email}
-        Telefono: ${phone}
+        Telefono: ${phone || 'Non specificato'}
         Messaggio: ${message}
       `,
     })
