@@ -86,7 +86,7 @@ export default function Component() {
             type='submit'
             className='w-full md:w-1/2 p-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-500'
           >
-            Submit
+            Invia richiesta
           </button>
         </div>
       </form>
