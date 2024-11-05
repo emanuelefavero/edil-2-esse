@@ -1,7 +1,10 @@
 'use server'
 
 import { Resend } from 'resend'
-import { createOwnerEmail, createUserEmail } from '@/utils/emails'
+import {
+  createEstimateRequestEmail,
+  createEstimateRequestConfirmationEmail,
+} from '@/utils/emails'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const customDomainEmail = process.env.CUSTOM_DOMAIN_EMAIL as string
@@ -17,21 +20,27 @@ export async function sendEstimateRequestEmail(formData: FormData) {
   }
 
   try {
-    const ownerEmailTemplate = createOwnerEmail(name, email, phone, message)
-    const userEmailTemplate = createUserEmail(name, customDomainEmail)
+    const estimateRequestEmail = createEstimateRequestEmail(
+      name,
+      email,
+      message,
+      phone
+    )
+    const estimateRequestConfirmationEmail =
+      createEstimateRequestConfirmationEmail(name, customDomainEmail)
 
     await Promise.all([
       resend.emails.send({
         from: customDomainEmail,
-        to: customDomainEmail,
+        to: customDomainEmail, // send details to owner
         subject: `Richiesta di preventivo da ${name}`,
-        html: ownerEmailTemplate,
+        html: estimateRequestEmail,
       }),
       resend.emails.send({
         from: customDomainEmail,
-        to: email,
+        to: email, // send confirmation to user
         subject: 'Richiesta di preventivo ricevuta',
-        html: userEmailTemplate,
+        html: estimateRequestConfirmationEmail,
       }),
     ])
 

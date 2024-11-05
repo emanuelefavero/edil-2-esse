@@ -1,4 +1,4 @@
-export function createOwnerEmail(
+export function createEstimateRequestEmail(
   name: string,
   email: string,
   message: string,
@@ -15,7 +15,7 @@ export function createOwnerEmail(
   `
 }
 
-export function createUserEmail(
+export function createEstimateRequestConfirmationEmail(
   name: string,
   customDomainEmail: string
 ): string {
