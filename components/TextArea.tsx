@@ -26,7 +26,7 @@ export default function Component({
     <div>
       <label
         htmlFor={name}
-        className='block text-sm font-medium text-stone-700 dark:text-stone-200 mb-2'
+        className='block text-sm font-medium text-stone-700 dark:text-stone-200 select-none mb-2'
       >
         {label}{' '}
         {required && (

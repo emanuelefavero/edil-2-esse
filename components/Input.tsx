@@ -30,7 +30,7 @@ export default function Component({
     <div className='w-full md:w-1/2 px-2 mb-5'>
       <label
         htmlFor={name}
-        className='block text-sm font-medium text-stone-700 dark:text-stone-200 mb-2'
+        className='block text-sm font-medium text-stone-700 dark:text-stone-200 select-none mb-2'
       >
         {label}{' '}
         {required && (
