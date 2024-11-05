@@ -11,6 +11,8 @@ export default function DropdownMenuDemo() {
   const [isOpen, setIsOpen] = useState(false)
   const isDarkMode = useDarkMode()
 
+  // TODO Go to section when clicking on menu item
+
   return (
     <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)}>
       <DropdownMenu.Trigger asChild>

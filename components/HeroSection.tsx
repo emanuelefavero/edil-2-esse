@@ -1,6 +1,8 @@
 import Button from '@/components/Button'
 
 export default function Component() {
+  // TODO Go to services section on button click (or change button to point to estimate request form)
+
   return (
     <section className='w-full h-[calc(100vh-126px)] min-h-[667px] max-h-[900px] pt-16 pb-4 px-10 flex flex-col justify-center items-center gap-10 bg-hero-image bg-cover bg-center'>
       <div className='text-center max-w-prose xl:scale-125 xl:mb-6'>
