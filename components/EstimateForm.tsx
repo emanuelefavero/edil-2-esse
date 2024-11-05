@@ -2,7 +2,6 @@ import { sendEstimateRequestEmail } from '@/app/actions'
 
 export default function Component() {
   // TODO add Button component as submit button
-  // TODO validate italian phone number
   // TODO Add form validation
   // TODO Add form submission success and error messages
   // TODO Add form submission loading state with useFormStatus hook
@@ -12,7 +11,7 @@ export default function Component() {
     <div className='flex justify-center mt-20'>
       <form
         action={sendEstimateRequestEmail}
-        className='w-full max-w-prose space-y-4'
+        className='w-full max-w-screen-lg space-y-4'
       >
         {/* Flex container for inputs */}
         <div className='flex flex-wrap -mx-2'>
@@ -42,7 +41,8 @@ export default function Component() {
               type='tel'
               name='phone'
               className='w-full p-2 font-medium text-stone-700 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 placeholder:text-stone-400'
-              placeholder='Il tuo numero di telefono'
+              placeholder='🇮🇹 Il tuo numero di telefono'
+              pattern='^(\+39\s?)?((3\d{2}\s?\d{6,7})|(0\d{1,4}\s?\d{5,10}))$'
             />
           </div>
           <div className='w-full md:w-1/2 px-2 mb-4'>
