@@ -12,54 +12,74 @@ export async function sendEstimateRequestEmail(formData: FormData) {
   const phone = formData.get('phone') as string
   const message = formData.get('message') as string
 
-  // Send an email to the owner with the estimate request details
   try {
+    // Send an email to the owner with the estimate request details
+    const ownerEmail = `
+        <h1>Dettagli della richiesta:</h1>
+
+        <p>
+          <b>Nome:</b> ${name}
+        </p>
+
+        <p>
+          <b>Email:</b> ${email}
+        </p>
+
+        <p>
+          <b>Telefono:</b> ${phone || 'Non specificato'}
+        </p>
+
+        <p>
+          <b>Messaggio:</b> ${message}
+        </p>
+
+        <p>
+          <b>Per rispondere:</b>
+        </p>
+
+        <a href="mailto:${email}">
+          ${email}
+        </a>
+      `
+
     await resend.emails.send({
       from: customDomainEmail,
       to: customDomainEmail,
       subject: `Richiesta di preventivo da ${name}`,
-
-      // TODO Replace email text with html
-      text: `
-        Nome: ${name}
-        Email: ${email}
-        Telefono: ${phone || 'Non specificato'}
-        Messaggio: ${message}
-      `,
+      html: ownerEmail,
     })
 
     // Send an email to the user to confirm that their estimate request was received
-    const userEmail = `<img src="https://www.edil2esse.it/logo.png" alt="Logo" width="125" height="72">
+    const userEmail = `
+        <img src="https://www.edil2esse.it/logo.png" alt="Logo" width="125" height="72">
 
-  <h1>
-    Ciao <b>${name}</b>, abbiamo ricevuto il tuo messaggio!
-  </h1>
+        <h1>
+          Ciao <b>${name}</b>, abbiamo ricevuto il tuo messaggio!
+        </h1>
 
-  <p>Grazie per averci contattato. Ti risponderemo il prima possibile.</p>
+        <p>Grazie per averci contattato. Ti risponderemo il prima possibile.</p>
 
-  <p>
-    Nel frattempo, se hai bisogno di contattarci, scrivici pure a questo
-    indirizzo:
-  </p>
+        <p>
+          Nel frattempo, se hai bisogno di contattarci, scrivici pure a questo indirizzo:
+        </p>
 
-  <a href="mailto:${customDomainEmail}">
-      ${customDomainEmail}
-  </a>
+        <a href="mailto:${customDomainEmail}">
+          ${customDomainEmail}
+        </a>
 
-  <p>A presto e grazie ancora per averci scelto!</p>
+        <p>A presto e grazie ancora per averci scelto!</p>
 
-  <p>Il team di <b>EDIL 2 ESSE</b></p>
+        <p>Il team di <b>EDIL 2 ESSE</b></p>
 
-  <a href="https://www.edil2esse.it">
-    edil2esse.it
-  </a>
-`
+        <a href="https://www.edil2esse.it">
+          edil2esse.it
+        </a>
+      `
 
     await resend.emails.send({
       from: customDomainEmail,
       to: email,
       subject: 'Richiesta di preventivo ricevuta',
-
       html: userEmail,
     })
 
