@@ -1,5 +1,6 @@
 'use server'
 
+import { redirect } from 'next/navigation'
 import { Resend } from 'resend'
 import {
   createEstimateRequestEmail,
@@ -48,4 +49,7 @@ export async function sendEstimateRequestEmail(formData: FormData) {
   } catch (error) {
     console.error('Error sending estimate request email:', error)
   }
+
+  // NOTE: redirect needs to be called outside of try/catch block
+  redirect('/success')
 }
