@@ -10,6 +10,8 @@ interface Props {
   ref?: Ref<HTMLTextAreaElement>
   disabled?: boolean
   rows?: number
+  maxLength?: number
+  minLength?: number
 }
 
 export default function Component({
@@ -21,6 +23,8 @@ export default function Component({
   ref,
   disabled = false,
   rows = 4,
+  maxLength = 600,
+  minLength = 3,
 }: Props) {
   return (
     <div>
@@ -37,7 +41,7 @@ export default function Component({
         id={name}
         name={name}
         className={clsx(
-          'w-full px-2.5 py-2 font-medium dark:bg-stone-800 text-stone-700 dark:text-stone-200 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 dark:focus:border-yellow-700 placeholder:text-stone-400 dark:placeholder:text-stone-500',
+          'w-full px-2.5 py-2 font-medium dark:bg-stone-800 text-stone-700 dark:text-stone-200 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 dark:focus:border-yellow-700 placeholder:text-stone-400 dark:placeholder:text-stone-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 dark:invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-700',
           className,
           disabled && 'opacity-50 cursor-not-allowed'
         )}
@@ -46,6 +50,8 @@ export default function Component({
         required={required}
         disabled={disabled}
         rows={rows}
+        maxLength={maxLength}
+        minLength={minLength}
       />
     </div>
   )
