@@ -67,9 +67,6 @@ export default function Component({
         <span className='text-sm font-medium text-red-500 right-3 absolute -top-0 hidden peer-[&:not(:placeholder-shown):not(:focus):invalid]:block'>
           {validationMessage}
         </span>
-        // <span className='text-sm font-medium text-red-500 right-3 absolute -top-0 hidden peer-invalid:block peer-placeholder-shown:hidden peer-focus:hidden'>
-        //   {validationMessage}
-        // </span>
       )}
     </div>
   )

@@ -5,7 +5,7 @@ import TextArea from '@/components/TextArea'
 
 export default function Component() {
   // TODO Add form submission loading state with useFormStatus hook
-  // TODO Add form validation client and server side (simply use html and css for client side?)
+  // TODO Add server side form validation
   // TODO Add form submission success and error messages
   // TODO Refactor this component (use loop to render inputs?)
 
@@ -42,6 +42,7 @@ export default function Component() {
           name='message'
           label='Messaggio'
           placeholder='Il tuo messaggio'
+          validationMessage='Inserisci un messaggio'
           required
           rows={5}
         />
