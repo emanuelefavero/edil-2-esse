@@ -51,5 +51,5 @@ export async function sendEstimateRequestEmail(formData: FormData) {
   }
 
   // NOTE: redirect needs to be called outside of try/catch block
-  redirect('/success')
+  redirect(`/success?name=${name}&email=${email}`)
 }
