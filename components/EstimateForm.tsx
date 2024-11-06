@@ -13,7 +13,13 @@ export default function Component() {
     <div className='w-full flex justify-center mt-20'>
       <form action={sendEstimateRequestEmail} className='w-full max-w-[788px]'>
         <div className='flex flex-wrap -mx-2'>
-          <Input name='name' label='Nome' placeholder='Il tuo nome' required />
+          <Input
+            name='name'
+            label='Nome'
+            placeholder='Il tuo nome'
+            validationMessage='Inserisci il tuo nome'
+            required
+          />
           <Input
             type='tel'
             name='phone'

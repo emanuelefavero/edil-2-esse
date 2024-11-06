@@ -49,7 +49,7 @@ export default function Component({
         id={name}
         name={name}
         className={clsx(
-          'w-full px-2.5 py-2 font-medium dark:bg-stone-800 text-stone-700 dark:text-stone-200 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 dark:focus:border-yellow-700 placeholder:text-stone-400 dark:placeholder:text-stone-500 invalid:border-red-500 dark:invalid:border-red-700 peer',
+          'w-full px-2.5 py-2 font-medium dark:bg-stone-800 text-stone-700 dark:text-stone-200 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 dark:focus:border-yellow-700 placeholder:text-stone-400 dark:placeholder:text-stone-500 [&:not(:placeholder-shown)]:invalid:border-red-500 dark:[&:not(:placeholder-shown)]:invalid:border-red-700 peer',
           className,
           disabled && 'opacity-50 cursor-not-allowed'
         )}
@@ -64,9 +64,12 @@ export default function Component({
       />
 
       {validationMessage && (
-        <span className='text-sm font-medium text-red-500 right-3 absolute -top-0 hidden peer-invalid:block peer-placeholder-shown:hidden peer-focus:hidden'>
+        <span className='text-sm font-medium text-red-500 right-3 absolute -top-0 hidden peer-[&:not(:placeholder-shown):not(:focus):invalid]:block'>
           {validationMessage}
         </span>
+        // <span className='text-sm font-medium text-red-500 right-3 absolute -top-0 hidden peer-invalid:block peer-placeholder-shown:hidden peer-focus:hidden'>
+        //   {validationMessage}
+        // </span>
       )}
     </div>
   )
