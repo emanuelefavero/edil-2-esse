@@ -64,7 +64,7 @@ export default function Component({
       />
 
       {validationMessage && (
-        <span className='text-sm font-medium text-red-500 right-3 absolute -top-0 hidden peer-[&:not(:placeholder-shown):not(:focus):invalid]:block'>
+        <span className='text-sm font-medium text-red-600 dark:text-red-500 right-3 absolute -top-0 hidden peer-[&:not(:placeholder-shown):not(:focus):invalid]:block'>
           {validationMessage}
         </span>
       )}
