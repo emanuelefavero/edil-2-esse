@@ -1,5 +1,5 @@
 import { sendEstimateRequestEmail } from '@/app/actions'
-import Button from '@/components/Button'
+import SubmitButton from '@/components/SubmitButton'
 import Input from '@/components/Input'
 import TextArea from '@/components/TextArea'
 
@@ -51,12 +51,9 @@ export default function Component() {
         />
 
         <div className='flex justify-end mt-5'>
-          <Button
-            type='submit'
-            className='w-full xs:max-w-fit text-sm 5xs:text-md 3xs:text-lg group-invalid:pointer-events-none group-invalid:opacity-60 dark:group-invalid:opacity-50'
-          >
+          <SubmitButton className='w-full xs:max-w-fit text-sm 5xs:text-md 3xs:text-lg group-invalid:pointer-events-none group-invalid:opacity-60 dark:group-invalid:opacity-50'>
             Invia <span className='hidden 3xs:inline'>richiesta</span>
-          </Button>
+          </SubmitButton>
         </div>
       </form>
     </div>
