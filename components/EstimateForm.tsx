@@ -4,9 +4,6 @@ import Input from '@/components/Input'
 import TextArea from '@/components/TextArea'
 
 export default function Component() {
-  // TODO Add form submission success state with useFormStatus hook
-  // TODO Add server side form validation
-  // TODO Add form submission success and error messages
   // TODO Refactor this component (use loop to render inputs?)
 
   return (
