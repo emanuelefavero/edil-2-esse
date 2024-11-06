@@ -26,6 +26,7 @@ export default function Component() {
             name='email'
             label='Email'
             placeholder='La tua email'
+            validationMessage='Inserisci un email valida'
             required
           />
         </div>
