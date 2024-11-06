@@ -13,7 +13,7 @@ interface Props {
   ref?: Ref<HTMLButtonElement>
 }
 
-export default function SubmitButton({
+export default function Component({
   children,
   onClick,
   ariaLabel,
