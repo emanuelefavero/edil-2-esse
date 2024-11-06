@@ -15,8 +15,8 @@ const customDomainEmail = process.env.CUSTOM_DOMAIN_EMAIL as string
 export async function sendEstimateRequestEmail(formData: FormData) {
   const name = capitalize(formData.get('name') as string)
   const email = formData.get('email') as string
-  const phone = formData.get('phone') as string
   const message = formData.get('message') as string
+  let phone = formData.get('phone') as string
 
   if (!name || !email || !message) {
     throw new Error('Required form fields are missing.')
@@ -28,6 +28,7 @@ export async function sendEstimateRequestEmail(formData: FormData) {
 
   if (phone && !isValidPhoneNumber(phone)) {
     console.warn('Invalid phone number:', phone)
+    phone += ' (Non valido)' // ? mark phone number as invalid
   }
 
   try {
