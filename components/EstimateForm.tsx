@@ -11,7 +11,10 @@ export default function Component() {
 
   return (
     <div className='w-full flex justify-center mt-20'>
-      <form action={sendEstimateRequestEmail} className='w-full max-w-[788px]'>
+      <form
+        action={sendEstimateRequestEmail}
+        className='w-full max-w-[788px] group'
+      >
         <div className='flex flex-wrap -mx-2'>
           <Input
             name='name'
@@ -50,7 +53,7 @@ export default function Component() {
         <div className='flex justify-end mt-5'>
           <Button
             type='submit'
-            className='w-full xs:max-w-fit text-sm 5xs:text-md 3xs:text-lg'
+            className='w-full xs:max-w-fit text-sm 5xs:text-md 3xs:text-lg group-invalid:pointer-events-none group-invalid:opacity-60 dark:group-invalid:opacity-50'
           >
             Invia <span className='hidden 3xs:inline'>richiesta</span>
           </Button>
