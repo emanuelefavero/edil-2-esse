@@ -6,12 +6,13 @@ import {
   createEstimateRequestEmail,
   createEstimateRequestConfirmationEmail,
 } from '@/utils/emails'
+import { capitalize } from '@/utils/capitalize'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const customDomainEmail = process.env.CUSTOM_DOMAIN_EMAIL as string
 
 export async function sendEstimateRequestEmail(formData: FormData) {
-  const name = formData.get('name') as string
+  const name = capitalize(formData.get('name') as string)
   const email = formData.get('email') as string
   const phone = formData.get('phone') as string
   const message = formData.get('message') as string
