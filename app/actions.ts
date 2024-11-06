@@ -7,6 +7,7 @@ import {
   createEstimateRequestConfirmationEmail,
 } from '@/utils/emails'
 import { capitalize } from '@/utils/capitalize'
+import { isValidEmail, isValidPhoneNumber } from '@/utils/validation'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const customDomainEmail = process.env.CUSTOM_DOMAIN_EMAIL as string
@@ -19,6 +20,14 @@ export async function sendEstimateRequestEmail(formData: FormData) {
 
   if (!name || !email || !message) {
     throw new Error('Required form fields are missing.')
+  }
+
+  if (!isValidEmail(email)) {
+    throw new Error('Invalid email address.')
+  }
+
+  if (phone && !isValidPhoneNumber(phone)) {
+    console.warn('Invalid phone number:', phone)
   }
 
   try {
