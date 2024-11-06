@@ -4,7 +4,7 @@ import Input from '@/components/Input'
 import TextArea from '@/components/TextArea'
 
 export default function Component() {
-  // TODO Add form submission loading state with useFormStatus hook
+  // TODO Add form submission success state with useFormStatus hook
   // TODO Add server side form validation
   // TODO Add form submission success and error messages
   // TODO Refactor this component (use loop to render inputs?)
@@ -51,8 +51,8 @@ export default function Component() {
         />
 
         <div className='flex justify-end mt-5'>
-          <SubmitButton className='w-full xs:max-w-fit text-sm 5xs:text-md 3xs:text-lg group-invalid:pointer-events-none group-invalid:opacity-60 dark:group-invalid:opacity-50'>
-            Invia <span className='hidden 3xs:inline'>richiesta</span>
+          <SubmitButton className='w-full xs:w-[169px] flex justify-center items-center text-sm 5xs:text-md 3xs:text-lg group-invalid:pointer-events-none group-invalid:opacity-60 dark:group-invalid:opacity-50'>
+            Invia <span className='hidden 3xs:inline'>&nbsp;richiesta</span>
           </SubmitButton>
         </div>
       </form>
