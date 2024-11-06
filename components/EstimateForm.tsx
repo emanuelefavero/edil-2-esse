@@ -25,6 +25,7 @@ export default function Component() {
             name='phone'
             label='Telefono'
             placeholder='Il tuo numero di telefono'
+            validationMessage='Inserisci un numero valido'
             pattern='^(\+39\s?)?((3\d{2}\s?\d{6,7})|(0\d{1,4}\s?\d{5,10}))$'
           />
           <Input
