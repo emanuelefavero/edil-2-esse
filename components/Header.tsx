@@ -3,6 +3,7 @@
 import { useScrollDirection } from '@/hooks/useScrollDirection'
 import DropdownMenu from '@/components/DropdownMenu'
 import Logo from '@/components/Logo'
+import Menu from './Menu'
 
 export default function Home() {
   const scrollDirection = useScrollDirection()
@@ -17,6 +18,7 @@ export default function Home() {
     >
       <div className='max-w-screen-2xl w-full flex justify-between items-center'>
         <Logo />
+        <Menu />
         <DropdownMenu />
       </div>
     </header>
