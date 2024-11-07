@@ -1,25 +1,27 @@
 # Edil 2 Esse Website
 
+<img src="public/logo.png" alt="logo" width="250">
+
 Website for **Edil 2 Esse**, a construction company that operates in Livorno, Pisa and province (_Italy_)
 
-<img src="public/logo.png" alt="logo" width="250">
+## Website
+
+- **URL**: [edil2esse.it](https://edil2esse.it)
 
 > Company Info:
 >
 > - **VAT** (P IVA): 01790840498
 > - Address: Via Bengasi, 97b - 57124 Livorno (LI)
 
-## Website
-
-- **URL**: [edil2esse.it](https://edil2esse.it)
-
 ## Description
 
-The website is a showcase for the company, it contains a homepage, a page with the services offered, a page with the projects carried out and a contact page
+The website is a showcase for the company, it contains a hero section, a services section, a contact section and a form where users can request a quote. When a user submits the form, a confirmation email is sent to the user and a notification email is sent to the company with the user's request.
+
+The website is responsive and works on all devices.
 
 ## Technologies
 
-The website is built with Next.js (React framework) and Tailwind CSS
+The website is built with Next.js (React framework), Resend for handling emails, Radix UI Primitives for the Dropdown Menu and Tailwind CSS for styling.
 
 ## Installation
 
