@@ -8,7 +8,7 @@ export default function Page() {
 
 function SuccessSection() {
   return (
-    <section className='w-full h-[calc(100vh)] min-h-[667px] max-h-[900px] pt-16 pb-4 px-10 dark:bg-[#151210]/40 flex flex-col justify-center items-center gap-10'>
+    <section className='w-full h-[calc(100vh-52px)] min-h-[667px] pt-16 pb-4 px-10 dark:bg-[#151210]/40 flex flex-col justify-center items-center gap-10'>
       <div className='text-center max-w-prose xl:scale-125 xl:mb-6'>
         <Suspense fallback={<div>Caricamento...</div>}>
           <Component />
