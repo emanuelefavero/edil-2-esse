@@ -12,7 +12,7 @@ export default function DropdownMenuDemo() {
   const [isOpen, setIsOpen] = useState(false)
   const isDarkMode = useDarkMode()
 
-  // TODO Make the viewport darker when the dropdown menu is open
+  // TODO Close dropdown menu when clicking on a Link (check on mobile, it's there that it doesn't work)
 
   return (
     <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)}>

@@ -1,7 +1,7 @@
-import Button from '@/components/Button'
+import HeroButton from '@/components/HeroButton'
 
 export default function Component() {
-  // TODO Go to services section on button click (or change button to point to estimate request form)
+  // TODO change button to point to estimate request form?
 
   return (
     <section
@@ -19,9 +19,7 @@ export default function Component() {
         </p>
       </div>
 
-      <Button className='text-sm 5xs:text-md 3xs:text-lg'>
-        <span className='hidden 3xs:inline'>I NOSTRI</span> SERVIZI
-      </Button>
+      <HeroButton />
     </section>
   )
 }
