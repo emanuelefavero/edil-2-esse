@@ -2,8 +2,6 @@ import { menuItems } from '@/data/menuItems'
 import Link from 'next/link'
 
 export default function Component() {
-  // TODO Go to section when clicking on menu items
-
   return (
     <div className='hidden xs:flex gap-3 mr-1'>
       {menuItems.map((item) => (

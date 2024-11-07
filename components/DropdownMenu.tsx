@@ -12,7 +12,7 @@ export default function DropdownMenuDemo() {
   const [isOpen, setIsOpen] = useState(false)
   const isDarkMode = useDarkMode()
 
-  // TODO Go to section when clicking on menu item
+  // TODO Make the viewport darker when the dropdown menu is open
 
   return (
     <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)}>
