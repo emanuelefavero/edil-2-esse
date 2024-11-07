@@ -8,14 +8,12 @@ import { useDarkMode } from '@/hooks/useDarkMode'
 import { menuItems } from '@/data/menuItems'
 import DropdownMenuItem from '@/components/DropdownMenuItem'
 
-export default function DropdownMenuDemo() {
+export default function Component() {
   const [isOpen, setIsOpen] = useState(false)
   const isDarkMode = useDarkMode()
 
-  // TODO Close dropdown menu when clicking on a Link (check on mobile, it's there that it doesn't work), try to use react-dropdown-menu built in features
-
   return (
-    <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)}>
+    <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)} open={isOpen}>
       <DropdownMenu.Trigger asChild>
         <button
           className='h-[40px] inline-flex xs:hidden items-center justify-center text-stone-700 dark:text-stone-200 rounded-sm outline-none focus:shadow-[0_0_0_1px] focus:shadow-stone-500/80 dark:focus:shadow-stone-500/80 select-none'
@@ -38,25 +36,24 @@ export default function DropdownMenuDemo() {
         </button>
       </DropdownMenu.Trigger>
 
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          className='z-[999] rounded-md bg-stone-100/90 dark:bg-[rgba(21,18,16,0.9)] backdrop-blur-md p-[5px] mr-2 shadow-sm shadow-stone-600/20 will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade border-[0.5px] border-stone-500/80'
-          sideOffset={0}
-        >
-          {menuItems.map((item) => (
-            <DropdownMenuItem key={item.id}>
-              <Link
-                href={`/#${item.id}`}
-                className='w-full px-2 py-3 font-medium hover:text-yellow-700 dark:hover:text-yellow-400 active:scale-95 transition-transform duration-200'
-              >
-                {item.label}
-              </Link>
-            </DropdownMenuItem>
-          ))}
+      <DropdownMenu.Content
+        className='z-[999] rounded-md bg-stone-100/90 dark:bg-[rgba(21,18,16,0.9)] backdrop-blur-md p-[5px] mr-2 shadow-sm shadow-stone-600/20 will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade border-[0.5px] border-stone-500/80'
+        sideOffset={0}
+      >
+        {menuItems.map((item) => (
+          <DropdownMenuItem key={item.id}>
+            <Link
+              href={`/#${item.id}`}
+              className='w-full px-2 py-3 font-medium hover:text-yellow-700 dark:hover:text-yellow-400 active:scale-95 transition-transform duration-200'
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </Link>
+          </DropdownMenuItem>
+        ))}
 
-          <DropdownMenu.Arrow className='fill-stone-600/80 dark:fill-stone-600/80' />
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
+        <DropdownMenu.Arrow className='fill-stone-600/80 dark:fill-stone-600/80' />
+      </DropdownMenu.Content>
     </DropdownMenu.Root>
   )
 }
