@@ -2,7 +2,10 @@ import EstimateForm from '@/components/EstimateForm'
 
 export default function Component() {
   return (
-    <section className='bg-stone-100 dark:bg-stone-900 px-8 2xl:px-16 py-36 flex justify-center items-center font-semibold'>
+    <section
+      id='preventivo'
+      className='bg-stone-100 dark:bg-stone-900 px-8 2xl:px-16 py-36 flex justify-center items-center font-semibold'
+    >
       <div className='w-full max-w-screen-2xl flex flex-col items-center justify-center'>
         <EstimateFormTitle />
         <EstimateForm />

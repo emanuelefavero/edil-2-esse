@@ -2,7 +2,10 @@ import { servicesItems, IServicesItem } from '@/data/servicesItems'
 
 export default function Component() {
   return (
-    <section className='w-full flex items-center justify-center flex-col px-8 py-40'>
+    <section
+      id='servizi'
+      className='w-full flex items-center justify-center flex-col px-8 py-40'
+    >
       <ServicesTitle />
       <ServicesList />
     </section>

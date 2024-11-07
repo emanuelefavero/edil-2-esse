@@ -4,7 +4,7 @@ import ServicesSection from '@/components/ServicesSection'
 import EstimateFormSection from '@/components/EstimateFormSection'
 
 export default function Home() {
-  // TODO: Add contacts section
+  // TODO: Add contacts section with id='contatti'
   return (
     <>
       <HeroSection />
