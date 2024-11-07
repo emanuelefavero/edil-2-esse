@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import Hamburger from 'hamburger-react'
 import { useDarkMode } from '@/hooks/useDarkMode'
@@ -43,7 +44,14 @@ export default function DropdownMenuDemo() {
           sideOffset={0}
         >
           {menuItems.map((item) => (
-            <DropdownMenuItem key={item.id}>{item.label}</DropdownMenuItem>
+            <DropdownMenuItem key={item.id}>
+              <Link
+                href={`/#${item.id}`}
+                className='w-full px-2 py-3 font-medium hover:text-yellow-700 dark:hover:text-yellow-400 active:scale-95 transition-transform duration-200'
+              >
+                {item.label}
+              </Link>
+            </DropdownMenuItem>
           ))}
 
           <DropdownMenu.Arrow className='fill-stone-600/80 dark:fill-stone-600/80' />
