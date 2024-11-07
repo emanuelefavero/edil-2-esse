@@ -12,7 +12,7 @@ export default function DropdownMenuDemo() {
   const [isOpen, setIsOpen] = useState(false)
   const isDarkMode = useDarkMode()
 
-  // TODO Close dropdown menu when clicking on a Link (check on mobile, it's there that it doesn't work)
+  // TODO Close dropdown menu when clicking on a Link (check on mobile, it's there that it doesn't work), try to use react-dropdown-menu built in features
 
   return (
     <DropdownMenu.Root onOpenChange={(open) => setIsOpen(open)}>
