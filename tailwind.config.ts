@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 import plugin from 'tailwindcss/plugin'
 
+// TODO add tailwind color global variables (e.g. text-primary, bg-primary)
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',

@@ -26,7 +26,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  // TODO Add footer
   return (
     <html lang='en'>
       <body

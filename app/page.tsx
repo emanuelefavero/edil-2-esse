@@ -5,7 +5,6 @@ import EstimateFormSection from '@/components/EstimateFormSection'
 import ContactsSection from '@/components/ContactsSection'
 
 export default function Home() {
-  // TODO: Add contacts section with id='contatti'
   return (
     <>
       <HeroSection />
