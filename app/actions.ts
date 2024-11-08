@@ -1,6 +1,7 @@
 'use server'
 
 import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
 import { Resend } from 'resend'
 import {
   createEstimateRequestEmail,
@@ -13,11 +14,15 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 const customDomainEmail = process.env.CUSTOM_DOMAIN_EMAIL as string
 
 export async function sendEstimateRequestEmail(formData: FormData) {
+  const cookieStore = await cookies() // get cookies
+
+  // * Get form data
   const name = capitalize(formData.get('name') as string)
   const email = formData.get('email') as string
   const message = formData.get('message') as string
   let phone = formData.get('phone') as string
 
+  // * Validate form data
   if (!name || !email || !message) {
     throw new Error('Required form fields are missing.')
   }
@@ -31,16 +36,18 @@ export async function sendEstimateRequestEmail(formData: FormData) {
     phone += ' (Non valido)' // ? mark phone number as invalid
   }
 
-  try {
-    const estimateRequestEmail = createEstimateRequestEmail(
-      name,
-      email,
-      message,
-      phone
-    )
-    const estimateRequestConfirmationEmail =
-      createEstimateRequestConfirmationEmail(name, customDomainEmail)
+  // * Create email templates
+  const estimateRequestEmail = createEstimateRequestEmail(
+    name,
+    email,
+    message,
+    phone
+  )
+  const estimateRequestConfirmationEmail =
+    createEstimateRequestConfirmationEmail(name, customDomainEmail)
 
+  // * Send emails
+  try {
     await Promise.all([
       resend.emails.send({
         from: customDomainEmail,
@@ -58,9 +65,19 @@ export async function sendEstimateRequestEmail(formData: FormData) {
 
     console.log('Estimate request emails sent successfully')
   } catch (error) {
-    console.error('Error sending estimate request email:', error)
+    console.error('Error sending estimate request emails:', error)
+    throw new Error('Failed to send estimate request emails.')
   }
 
-  // NOTE: redirect needs to be called outside of try/catch block
+  // * Set cookie to access success page (@see @/middleware.ts)
+  cookieStore.set('formSubmitted', 'true', {
+    maxAge: 60 * 3, // 3 minutes
+    // path: '/success',
+    // httpOnly: true,
+    // secure: process.env.NODE_ENV === 'production',
+    // sameSite: 'strict',
+  })
+
+  // * Redirect to success page
   redirect(`/success?name=${name}&email=${email}`)
 }
