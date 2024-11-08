@@ -1,8 +1,18 @@
+// page.test.jsx
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import HeroSection from '@/components/HeroSection'
+import Page from '@/app/page'
 
-// Mock useRouter (imported by HeroButton)
+// Mock Resend to avoid API key issues in test environment
+jest.mock('resend', () => {
+  return {
+    Resend: jest.fn().mockImplementation(() => ({
+      emails: { send: jest.fn() },
+    })),
+  }
+})
+
+// Mock useRouter
 jest.mock('next/navigation', () => ({
   useRouter() {
     return {
@@ -11,12 +21,10 @@ jest.mock('next/navigation', () => ({
   },
 }))
 
-describe('Hero Section', () => {
+describe('Page', () => {
   it('renders the h1 heading', () => {
-    render(<HeroSection />)
-
+    render(<Page />)
     const heading = screen.getByRole('heading', { level: 1 })
-
     expect(heading).toBeInTheDocument()
   })
 })
