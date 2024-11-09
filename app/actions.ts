@@ -72,6 +72,7 @@ export async function sendEstimateRequestEmail(formData: FormData) {
   // * Set cookie to access success page (@see @/middleware.ts)
   cookieStore.set('formSubmitted', 'true', {
     maxAge: 60, // 1 minute
+    sameSite: 'strict', // prevent cross-site cookie leakage
   })
 
   // * Redirect to success page
