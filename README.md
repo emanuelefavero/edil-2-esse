@@ -1,6 +1,6 @@
 # Edil 2 Esse Website
 
-<img src="public/logo.png" alt="logo" width="250">
+<img src="public/logo.png" alt="logo" width="100">
 
 Website for **Edil 2 Esse**, a construction company that operates in Livorno, Pisa and province (_Italy_)
 
@@ -12,6 +12,10 @@ Website for **Edil 2 Esse**, a construction company that operates in Livorno, Pi
 >
 > - **VAT** (P IVA): 01790840498
 > - Address: Via Bengasi, 97b - 57124 Livorno (LI)
+
+#### Mockup
+
+![mockup](./mockup.webp 'mockup')
 
 ## Description
 
