@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import EstimateForm from './EstimateForm'
 
 describe('EstimateForm client side validation', () => {
@@ -13,18 +13,16 @@ describe('EstimateForm client side validation', () => {
 
     fireEvent.click(submitButton)
 
-    await waitFor(() => {
-      const nameValidationMessage = screen.getByText(/(inserisci il tuo nome)/i)
-      const emailValidationMessage = screen.getByText(
-        /(inserisci un email valida)/i
-      )
-      const messageValidationMessage = screen.getByText(
-        /(inserisci un messaggio)/i
-      )
+    const nameValidationMessage = screen.getByText(/(inserisci il tuo nome)/i)
+    const emailValidationMessage = screen.getByText(
+      /(inserisci un email valida)/i
+    )
+    const messageValidationMessage = screen.getByText(
+      /(inserisci un messaggio)/i
+    )
 
-      expect(nameValidationMessage).toBeVisible()
-      expect(emailValidationMessage).toBeVisible()
-      expect(messageValidationMessage).toBeVisible()
-    })
+    expect(nameValidationMessage).toBeVisible()
+    expect(emailValidationMessage).toBeVisible()
+    expect(messageValidationMessage).toBeVisible()
   })
 })
