@@ -3,9 +3,11 @@ import Menu from './Menu'
 import { menuItems } from '@/data/menuItems'
 
 describe('Menu', () => {
-  it('renders the menu items', () => {
+  beforeEach(() => {
     render(<Menu />)
+  })
 
+  it('renders the menu items', () => {
     menuItems.forEach((item) => {
       const link = screen.getByText(item.label)
       expect(link).toBeInTheDocument()
@@ -13,8 +15,6 @@ describe('Menu', () => {
   })
 
   it('should navigate to the correct section', () => {
-    render(<Menu />)
-
     menuItems.forEach((item) => {
       // Get the link element
       const link = screen.getByText(item.label)
