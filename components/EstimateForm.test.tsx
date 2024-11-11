@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import EstimateForm from './EstimateForm'
 
 describe('EstimateForm client side validation', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     render(<EstimateForm />)
   })
 
@@ -24,5 +24,22 @@ describe('EstimateForm client side validation', () => {
     expect(nameValidationMessage).toBeVisible()
     expect(emailValidationMessage).toBeVisible()
     expect(messageValidationMessage).toBeVisible()
+  })
+
+  it('should show validation message for phone input if invalid', async () => {
+    const phoneInput = screen.getByLabelText(/(telefono)/i)
+
+    // Enter invalid phone number
+    fireEvent.change(phoneInput, {
+      target: { value: '123' },
+    })
+
+    fireEvent.blur(phoneInput) // blur input to trigger validation
+
+    // Check if validation message is visible
+    const phoneValidationMessage = screen.getByText(
+      /(inserisci un numero valido)/i
+    )
+    expect(phoneValidationMessage).toBeVisible()
   })
 })
