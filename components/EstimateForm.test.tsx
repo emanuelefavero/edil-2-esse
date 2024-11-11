@@ -42,4 +42,19 @@ describe('EstimateForm client side validation', () => {
     )
     expect(phoneValidationMessage).toBeVisible()
   })
+
+  it('should show validation message for invalid email and remove it for valid email', () => {
+    const emailInput = screen.getByLabelText(/email/i) as HTMLInputElement
+
+    // Test for invalid email
+    fireEvent.change(emailInput, { target: { value: 'invalid-email' } })
+    fireEvent.blur(emailInput)
+
+    // Check that the email is invalid and the validation message is visible
+    expect(emailInput.checkValidity()).toBe(false)
+    const emailValidationMessage = screen.getByText(
+      /inserisci un email valida/i
+    )
+    expect(emailValidationMessage).toBeVisible()
+  })
 })
