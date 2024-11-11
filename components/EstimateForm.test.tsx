@@ -27,7 +27,7 @@ describe('EstimateForm client side validation', () => {
   })
 
   it('should show validation message for phone input if invalid', () => {
-    const phoneInput = screen.getByLabelText(/(telefono)/i)
+    const phoneInput = screen.getByLabelText(/(telefono)/i) as HTMLInputElement
 
     // Enter invalid phone number
     fireEvent.change(phoneInput, {
