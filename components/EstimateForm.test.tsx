@@ -6,7 +6,7 @@ describe('EstimateForm client side validation', () => {
     render(<EstimateForm />)
   })
 
-  it('should show validation messages for required fields if left empty', async () => {
+  it('should show validation messages for required fields if left empty', () => {
     const submitButton = screen.getByRole('button', {
       name: /\b(invia richiesta)\b/i,
     })
@@ -26,7 +26,7 @@ describe('EstimateForm client side validation', () => {
     expect(messageValidationMessage).toBeVisible()
   })
 
-  it('should show validation message for phone input if invalid', async () => {
+  it('should show validation message for phone input if invalid', () => {
     const phoneInput = screen.getByLabelText(/(telefono)/i)
 
     // Enter invalid phone number
