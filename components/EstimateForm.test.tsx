@@ -66,4 +66,6 @@ describe('EstimateForm client side validation', () => {
 
     // NOTE: The validation message always appear to be visible since we used TailwindCSS to dynamically show or hide it
   })
+
+  // NOTE: We cannot check if the button is disabled because the button is not really disabled when the form is invalid but instead we used TailwindCSS to make the button behave like it is disabled. The reason was to avoid having to use react state to manage the button state and having to change the EstimateForm into a client component
 })
