@@ -22,6 +22,7 @@ export default function Component() {
         <button
           className='h-[40px] inline-flex xs:hidden items-center justify-center text-stone-700 dark:text-stone-200 rounded-sm outline-none focus:shadow-[0_0_0_1px] focus:shadow-stone-500/80 dark:focus:shadow-stone-500/80 select-none'
           aria-label='Open dropdown menu'
+          data-testid='dropdown-menu-trigger'
         >
           <Hamburger
             toggled={isOpen}
