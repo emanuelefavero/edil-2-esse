@@ -43,7 +43,7 @@ describe('EstimateForm client side validation', () => {
     expect(phoneValidationMessage).toBeVisible()
   })
 
-  it('should show validation message for invalid email and remove it for valid email', () => {
+  it('should check if email input is valid', () => {
     const emailInput = screen.getByLabelText(/email/i) as HTMLInputElement
 
     // Test for invalid email
@@ -56,5 +56,14 @@ describe('EstimateForm client side validation', () => {
       /inserisci un email valida/i
     )
     expect(emailValidationMessage).toBeVisible()
+
+    // Test for valid email
+    fireEvent.change(emailInput, { target: { value: 'john@example.com' } })
+    fireEvent.blur(emailInput)
+
+    // Check that the email is valid
+    expect(emailInput.checkValidity()).toBe(true)
+
+    // NOTE: The validation message always appear to be visible since we used TailwindCSS to dynamically show or hide it
   })
 })
