@@ -15,7 +15,7 @@ describe('Menu', () => {
   })
 
   it('should navigate to the correct section', () => {
-    menuItems.forEach((item) => {
+    menuItems.forEach(async (item) => {
       // Get the link element
       const link = screen.getByText(item.label)
 
@@ -23,7 +23,7 @@ describe('Menu', () => {
       fireEvent.click(link)
 
       // Wait for the URL to change and the section to be in the viewport
-      waitFor(() => {
+      await waitFor(() => {
         // Check if the URL has changed
         expect(window.location.href).toContain(item.id)
 
