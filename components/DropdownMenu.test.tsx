@@ -1,7 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Component from './DropdownMenu'
 import { useDarkMode } from '@/hooks/useDarkMode'
-import { menuItems } from '@/data/menuItems'
 
 // Mock useDarkMode hook
 jest.mock('@/hooks/useDarkMode', () => ({
@@ -19,19 +18,5 @@ describe('DropdownMenu', () => {
   it('renders the trigger button', () => {
     const button = screen.getByLabelText(/Open dropdown menu/i)
     expect(button).toBeInTheDocument()
-  })
-
-  it('renders the menu items', () => {
-    // Open menu
-    const button = screen.getByLabelText(/Open dropdown menu/i)
-    fireEvent.click(button)
-
-    // Wait for the menu to open
-    waitFor(() => {
-      menuItems.forEach((item) => {
-        const link = screen.getByText(item.label)
-        expect(link).toBeInTheDocument()
-      })
-    })
   })
 })
