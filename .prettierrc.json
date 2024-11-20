@@ -15,5 +15,6 @@
     "prettier-plugin-organize-imports",
     "prettier-plugin-tailwindcss"
   ],
+  "organizeImportsSkipDestructiveCodeActions": true,
   "tailwindConfig": "./tailwind.config.ts"
 }
