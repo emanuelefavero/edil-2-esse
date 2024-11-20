@@ -12,7 +12,7 @@ export default function Component() {
       <div className='mb-2 text-lg text-stone-700 dark:text-white'>
         EDIL 2 ESSE
       </div>
-      <h1 className='text-stone-700 dark:text-white font-semibold text-lg 5xs:text-2xl 4xs:text-3xl 2xs:text-4xl 5xs:leading-[2.3rem] 4xs:leading-[3rem] 2xs:leading-[3.3rem] mb-4'>
+      <h1 className='mb-4 text-lg font-semibold text-stone-700 5xs:text-2xl 5xs:leading-[2.3rem] 4xs:text-3xl 4xs:leading-[3rem] 2xs:text-4xl 2xs:leading-[3.3rem] dark:text-white'>
         Grazie per averci contattato
         {name ? (
           <>
@@ -24,7 +24,7 @@ export default function Component() {
         )}
         !
       </h1>
-      <p className='font-[500] hidden 4xs:block text-md text-pretty text-stone-700 dark:text-white'>
+      <p className='text-md hidden text-pretty font-[500] text-stone-700 4xs:block dark:text-white'>
         Ti risponderemo al più presto. Nel frattempo ti abbiamo inviato un email
         di conferma{' '}
         {email ? (

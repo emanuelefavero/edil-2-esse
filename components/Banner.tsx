@@ -10,27 +10,27 @@ function BannerItem({ item }: Props) {
     id === 4
       ? 'hidden lg:flex'
       : id === 3
-      ? 'hidden md:flex'
-      : id === 2
-      ? 'hidden sm:flex'
-      : 'flex'
+        ? 'hidden md:flex'
+        : id === 2
+          ? 'hidden sm:flex'
+          : 'flex'
 
   const sizeBasedOnSymbol = item.symbol === '%' ? 'text-2xl' : 'text-4xl'
 
   return (
     <li
       key={item.id}
-      className={`flex justify-center items-center ${responsiveHide(item.id)} ${
+      className={`flex items-center justify-center ${responsiveHide(item.id)} ${
         item.id > 1 && 'ml-16 lg:ml-16'
       }`}
     >
-      <div className='hidden 5xs:block text-5xl font-bold text-shadow-yellow select-none'>
+      <div className='hidden select-none text-5xl font-bold text-shadow-yellow 5xs:block'>
         {item.value}
         <span className={`relative -top-2 ml-0.5 ${sizeBasedOnSymbol}`}>
           {item.symbol}
         </span>
       </div>
-      <div className='text-sm text-shadow-yellow ml-4 select-none'>
+      <div className='ml-4 select-none text-sm text-shadow-yellow'>
         <span className={`${item.id === 1 ? 'inline 5xs:hidden' : 'hidden'}`}>
           35+{' '}
         </span>
@@ -45,8 +45,8 @@ export default function Banner() {
     <>
       <ZigZagBorder />
 
-      <section className='min-h-[130px] bg-yellow-600 text-white border-b-[2.5px] border-yellow-700/60 dark:border-yellow-700/80 px-8 2xl:px-16 py-8 flex justify-center items-center font-semibold'>
-        <ul className='w-full max-w-screen-2xl flex items-center justify-center'>
+      <section className='flex min-h-[130px] items-center justify-center border-b-[2.5px] border-yellow-700/60 bg-yellow-600 px-8 py-8 font-semibold text-white 2xl:px-16 dark:border-yellow-700/80'>
+        <ul className='flex w-full max-w-screen-2xl items-center justify-center'>
           {bannerItems.map((item) => (
             <BannerItem key={item.id} item={item} />
           ))}

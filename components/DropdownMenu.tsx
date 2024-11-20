@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
-import Link from 'next/link'
+import DropdownMenuItem from '@/components/DropdownMenuItem'
+import { menuItems } from '@/data/menuItems'
+import { useDarkMode } from '@/hooks/useDarkMode'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import Hamburger from 'hamburger-react'
-import { useDarkMode } from '@/hooks/useDarkMode'
-import { menuItems } from '@/data/menuItems'
-import DropdownMenuItem from '@/components/DropdownMenuItem'
+import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Component() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +20,7 @@ export default function Component() {
     >
       <DropdownMenu.Trigger asChild>
         <button
-          className='h-[40px] inline-flex xs:hidden items-center justify-center text-stone-700 dark:text-stone-200 rounded-sm outline-none focus:shadow-[0_0_0_1px] focus:shadow-stone-500/80 dark:focus:shadow-stone-500/80 select-none'
+          className='inline-flex h-[40px] select-none items-center justify-center rounded-sm text-stone-700 outline-none focus:shadow-[0_0_0_1px] focus:shadow-stone-500/80 xs:hidden dark:text-stone-200 dark:focus:shadow-stone-500/80'
           aria-label='Open dropdown menu'
         >
           <Hamburger
@@ -33,8 +33,8 @@ export default function Component() {
                   ? '#f59e0b'
                   : '#e7e5e4'
                 : isOpen
-                ? '#d97706'
-                : '#44403c'
+                  ? '#d97706'
+                  : '#44403c'
             }
           />
         </button>
@@ -42,14 +42,14 @@ export default function Component() {
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className='z-[999] rounded-md bg-stone-100/90 dark:bg-[rgba(21,18,16,0.9)] backdrop-blur-md p-[5px] mr-2 shadow-sm shadow-stone-600/20 will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade border-[0.5px] border-stone-500/80'
+          className='z-[999] mr-2 rounded-md border-[0.5px] border-stone-500/80 bg-stone-100/90 p-[5px] shadow-sm shadow-stone-600/20 backdrop-blur-md will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade dark:bg-[rgba(21,18,16,0.9)]'
           sideOffset={0}
         >
           {menuItems.map((item) => (
             <DropdownMenuItem key={item.id}>
               <Link
                 href={`/#${item.id}`}
-                className='w-full px-2 py-3 font-medium hover:text-yellow-700 dark:hover:text-yellow-400 active:scale-95 transition-transform duration-200'
+                className='w-full px-2 py-3 font-medium transition-transform duration-200 hover:text-yellow-700 active:scale-95 dark:hover:text-yellow-400'
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

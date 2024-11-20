@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 export default function Component() {
   return (
-    <div className='hidden xs:flex gap-3 mr-1'>
+    <div className='mr-1 hidden gap-3 xs:flex'>
       {menuItems.map((item) => (
         <Link
           href={`/#${item.id}`}
           key={item.id}
-          className='px-2 font-medium rounded-sm text-stone-700 dark:text-white hover:text-yellow-700 dark:hover:text-yellow-400 outline-none focus:text-yellow-600 dark:focus:text-yellow-500 select-none active:scale-95 transition-transform duration-200'
+          className='select-none rounded-sm px-2 font-medium text-stone-700 outline-none transition-transform duration-200 hover:text-yellow-700 focus:text-yellow-600 active:scale-95 dark:text-white dark:hover:text-yellow-400 dark:focus:text-yellow-500'
         >
           {item.label}
         </Link>

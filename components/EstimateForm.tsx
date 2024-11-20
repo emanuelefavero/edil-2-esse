@@ -1,18 +1,18 @@
 import { sendEstimateRequestEmail } from '@/app/actions'
-import SubmitButton from '@/components/SubmitButton'
 import Input from '@/components/Input'
+import SubmitButton from '@/components/SubmitButton'
 import TextArea from '@/components/TextArea'
 
 export default function Component() {
   // TODO Refactor this component (use loop to render inputs?)
 
   return (
-    <div className='w-full flex justify-center mt-20'>
+    <div className='mt-20 flex w-full justify-center'>
       <form
         action={sendEstimateRequestEmail}
-        className='w-full max-w-[788px] group'
+        className='group w-full max-w-[788px]'
       >
-        <div className='flex flex-wrap -mx-2'>
+        <div className='-mx-2 flex flex-wrap'>
           <Input
             name='name'
             label='Nome'
@@ -47,8 +47,8 @@ export default function Component() {
           rows={5}
         />
 
-        <div className='flex justify-end mt-5'>
-          <SubmitButton className='w-full xs:w-[169px] flex justify-center items-center text-sm 5xs:text-md 3xs:text-lg group-invalid:pointer-events-none group-invalid:opacity-60 dark:group-invalid:opacity-50'>
+        <div className='mt-5 flex justify-end'>
+          <SubmitButton className='5xs:text-md flex w-full items-center justify-center text-sm group-invalid:pointer-events-none group-invalid:opacity-60 3xs:text-lg xs:w-[169px] dark:group-invalid:opacity-50'>
             Invia <span className='hidden 3xs:inline'>&nbsp;richiesta</span>
           </SubmitButton>
         </div>

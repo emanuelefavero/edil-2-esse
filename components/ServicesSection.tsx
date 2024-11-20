@@ -1,10 +1,10 @@
-import { servicesItems, IServicesItem } from '@/data/servicesItems'
+import { IServicesItem, servicesItems } from '@/data/servicesItems'
 
 export default function Component() {
   return (
     <section
       id='servizi'
-      className='w-full flex items-center justify-center flex-col px-8 py-40'
+      className='flex w-full flex-col items-center justify-center px-8 py-40'
     >
       <ServicesTitle />
       <ServicesList />
@@ -16,14 +16,14 @@ export default function Component() {
 function ServicesTitle() {
   return (
     <div className='xl:scale-125'>
-      <div className='flex justify-center items-center'>
-        <div className='hidden 5xs:block text-yellow-700 dark:text-yellow-500 font-semibold whitespace-nowrap mr-3'>
+      <div className='flex items-center justify-center'>
+        <div className='mr-3 hidden whitespace-nowrap font-semibold text-yellow-700 5xs:block dark:text-yellow-500'>
           Cosa offriamo
         </div>
-        <div className='hidden 3xs:block bg-yellow-700 dark:bg-yellow-500 h-0.5 w-full'></div>
+        <div className='hidden h-0.5 w-full bg-yellow-700 3xs:block dark:bg-yellow-500'></div>
       </div>
 
-      <h2 className='text-sm 5xs:text-[2rem] leading-10 font-bold uppercase text-center'>
+      <h2 className='text-center text-sm font-bold uppercase leading-10 5xs:text-[2rem]'>
         I Nostri Servizi
       </h2>
     </div>
@@ -33,7 +33,7 @@ function ServicesTitle() {
 // * List
 function ServicesList() {
   return (
-    <ul className='w-full max-w-screen-xl flex flex-wrap justify-center items-stretch gap-8 mt-28'>
+    <ul className='mt-28 flex w-full max-w-screen-xl flex-wrap items-stretch justify-center gap-8'>
       {servicesItems.map((item) => (
         <ServiceCard key={item.id} item={item} />
       ))}
@@ -44,17 +44,17 @@ function ServicesList() {
 // * Card
 function ServiceCard({ item }: { item: IServicesItem }) {
   return (
-    <li className='w-fit max-w-[378px] flex flex-col items-center justify-center bg-stone-50 dark:bg-[#151210] border-2 border-yellow-700/35 dark:border-yellow-600/35 shadow-[1px_1px_0px_0px] dark:shadow-[0.5px_0.5px_0px_0px] shadow-yellow-800/70 dark:shadow-yellow-600/70 rounded-3xl'>
-      <div className='bg-amber-50 dark:bg-yellow-950/10 border-b border-yellow-700/35 dark:border-yellow-600/35 w-full flex justify-center items-center px-2 py-8 rounded-t-3xl'>
+    <li className='flex w-fit max-w-[378px] flex-col items-center justify-center rounded-3xl border-2 border-yellow-700/35 bg-stone-50 shadow-[1px_1px_0px_0px] shadow-yellow-800/70 dark:border-yellow-600/35 dark:bg-[#151210] dark:shadow-[0.5px_0.5px_0px_0px] dark:shadow-yellow-600/70'>
+      <div className='flex w-full items-center justify-center rounded-t-3xl border-b border-yellow-700/35 bg-amber-50 px-2 py-8 dark:border-yellow-600/35 dark:bg-yellow-950/10'>
         <item.icon className='w-20' />
       </div>
-      <div className='min-h-[200px] px-5 pt-4 pb-6 rounded-b-3xl'>
-        <h3 className={`text-xl min-h-[40px] font-semibold`}>{item.title}</h3>
-        <ul className='mt-4 w-full flex flex-col gap-2 items-start text-base'>
+      <div className='min-h-[200px] rounded-b-3xl px-5 pb-6 pt-4'>
+        <h3 className={`min-h-[40px] text-xl font-semibold`}>{item.title}</h3>
+        <ul className='mt-4 flex w-full flex-col items-start gap-2 text-base'>
           {item.list.map((item, index) => (
-            <li key={index} className='w-full pl-3 flex items-start'>
+            <li key={index} className='flex w-full items-start pl-3'>
               {/* Circle */}
-              <span className='relative top-[8.4px] inline-block flex-shrink-0 w-2 h-2 bg-yellow-600 dark:bg-yellow-600 rounded-full mr-3'></span>
+              <span className='relative top-[8.4px] mr-3 inline-block h-2 w-2 flex-shrink-0 rounded-full bg-yellow-600 dark:bg-yellow-600'></span>
 
               <span className='text-stone-600 dark:text-stone-400'>{item}</span>
             </li>

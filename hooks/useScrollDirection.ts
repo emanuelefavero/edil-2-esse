@@ -1,10 +1,10 @@
 // * Hook to detect the scroll direction of the page (up or down)
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down' | null>(
-    null
+    null,
   )
 
   useEffect(() => {

@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import Menu from './Menu'
 import { menuItems } from '@/data/menuItems'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import Menu from './Menu'
 
 describe('Menu', () => {
   beforeEach(() => {

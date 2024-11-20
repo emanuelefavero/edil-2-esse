@@ -1,10 +1,10 @@
-import { ReactNode } from 'react'
-import GiDrillIcon from '@/components/icons/GiDrillIconIcon'
-import GiBrickWallIcon from '@/components/icons/GiBrickWallIconIcon'
 import BsBuildingsIcon from '@/components/icons/BsBuildingsIcon'
-import BsThermometerSunIcon from '@/components/icons/BsThermometerSunIcon'
 import BsDoorClosedIcon from '@/components/icons/BsDoorClosedIcon'
+import BsThermometerSunIcon from '@/components/icons/BsThermometerSunIcon'
+import GiBrickWallIcon from '@/components/icons/GiBrickWallIconIcon'
+import GiDrillIcon from '@/components/icons/GiDrillIconIcon'
 import MdOutlineElectricalServicesIcon from '@/components/icons/MdOutlineElectricalServicesIcon'
+import { ReactNode } from 'react'
 
 export interface IServicesItem {
   id: number

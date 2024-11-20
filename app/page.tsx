@@ -1,8 +1,8 @@
 import Banner from '@/components/Banner'
+import ContactsSection from '@/components/ContactsSection'
+import EstimateFormSection from '@/components/EstimateFormSection'
 import HeroSection from '@/components/HeroSection'
 import ServicesSection from '@/components/ServicesSection'
-import EstimateFormSection from '@/components/EstimateFormSection'
-import ContactsSection from '@/components/ContactsSection'
 
 export default function Home() {
   return (

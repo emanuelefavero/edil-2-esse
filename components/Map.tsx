@@ -8,7 +8,7 @@ export default function Component() {
       allowFullScreen={true}
       loading='lazy'
       referrerPolicy='no-referrer-when-downgrade'
-      className='rounded-md shadow-[0_0_0_2.5px] shadow-yellow-700/80 hidden md:block w-80'
+      className='hidden w-80 rounded-md shadow-[0_0_0_2.5px] shadow-yellow-700/80 md:block'
     ></iframe>
   )
 }

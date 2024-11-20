@@ -2,13 +2,13 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className='w-full bg-yellow-600 text-white py-4 px-4 flex flex-col xs:flex-row justify-center items-center gap-2 text-sm'>
+    <footer className='flex w-full flex-col items-center justify-center gap-2 bg-yellow-600 px-4 py-4 text-sm text-white xs:flex-row'>
       <p>&copy; {year} Edil 2 Esse</p>
 
-      <span className='hidden xs:inline-block text-white mx-1'>|</span>
+      <span className='mx-1 hidden text-white xs:inline-block'>|</span>
 
       <a
-        className='hidden 5xs:inline-block font-medium hover:underline text-center xs:text-left'
+        className='hidden text-center font-medium hover:underline 5xs:inline-block xs:text-left'
         href='https://emanuelefavero.com/'
         target='_blank'
         rel='noopener noreferrer'

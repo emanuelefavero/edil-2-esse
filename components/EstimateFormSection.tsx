@@ -4,9 +4,9 @@ export default function Component() {
   return (
     <section
       id='preventivo'
-      className='bg-stone-100 dark:bg-stone-900 px-8 2xl:px-16 py-36 flex justify-center items-center font-semibold'
+      className='flex items-center justify-center bg-stone-100 px-8 py-36 font-semibold 2xl:px-16 dark:bg-stone-900'
     >
-      <div className='w-full max-w-screen-2xl flex flex-col items-center justify-center'>
+      <div className='flex w-full max-w-screen-2xl flex-col items-center justify-center'>
         <EstimateFormTitle />
         <EstimateForm />
       </div>
@@ -16,7 +16,7 @@ export default function Component() {
 
 function EstimateFormTitle() {
   return (
-    <h2 className='text-sm 5xs:text-[2rem] leading-10 font-bold text-center'>
+    <h2 className='text-center text-sm font-bold leading-10 5xs:text-[2rem]'>
       Richiedi un preventivo{' '}
       <span className='text-yellow-600 dark:text-amber-500'>gratuito</span>
     </h2>

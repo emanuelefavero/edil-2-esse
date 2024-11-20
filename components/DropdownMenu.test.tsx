@@ -1,6 +1,6 @@
+import { useDarkMode } from '@/hooks/useDarkMode'
 import { render, screen } from '@testing-library/react'
 import Component from './DropdownMenu'
-import { useDarkMode } from '@/hooks/useDarkMode'
 
 // NOTE: Since the dropdown menu is a Radix UI component that renders a portal, testing this component is more complex. We already tested the menu items in the Menu component, so we decided to only test the trigger button in this component.
 

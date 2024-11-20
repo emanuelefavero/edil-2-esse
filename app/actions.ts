@@ -1,14 +1,14 @@
 'use server'
 
-import { redirect } from 'next/navigation'
-import { cookies } from 'next/headers'
-import { Resend } from 'resend'
-import {
-  createEstimateRequestEmail,
-  createEstimateRequestConfirmationEmail,
-} from '@/utils/emails'
 import { capitalize } from '@/utils/capitalize'
+import {
+  createEstimateRequestConfirmationEmail,
+  createEstimateRequestEmail,
+} from '@/utils/emails'
 import { isValidEmail, isValidPhoneNumber } from '@/utils/validation'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
+import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const customDomainEmail = process.env.CUSTOM_DOMAIN_EMAIL as string
@@ -41,7 +41,7 @@ export async function sendEstimateRequestEmail(formData: FormData) {
     name,
     email,
     message,
-    phone
+    phone,
   )
   const estimateRequestConfirmationEmail =
     createEstimateRequestConfirmationEmail(name, customDomainEmail)

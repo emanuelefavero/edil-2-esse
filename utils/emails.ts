@@ -2,7 +2,7 @@ export function createEstimateRequestEmail(
   name: string,
   email: string,
   message: string,
-  phone?: string
+  phone?: string,
 ): string {
   return `
     <h1>Dettagli della richiesta:</h1>
@@ -17,7 +17,7 @@ export function createEstimateRequestEmail(
 
 export function createEstimateRequestConfirmationEmail(
   name: string,
-  customDomainEmail: string
+  customDomainEmail: string,
 ): string {
   return `
     <img src="https://www.edil2esse.it/logo.png" alt="Logo" width="125" height="72">

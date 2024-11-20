@@ -1,5 +1,5 @@
-import { Ref } from 'react'
 import clsx from 'clsx'
+import { Ref } from 'react'
 
 interface Props {
   name: string
@@ -32,7 +32,7 @@ export default function Component({
     <div className='relative'>
       <label
         htmlFor={name}
-        className='block text-sm font-medium text-stone-700 dark:text-stone-200 select-none mb-2'
+        className='mb-2 block select-none text-sm font-medium text-stone-700 dark:text-stone-200'
       >
         {label}{' '}
         {required && (
@@ -43,9 +43,9 @@ export default function Component({
         id={name}
         name={name}
         className={clsx(
-          'w-full px-2.5 py-2 font-medium dark:bg-stone-800 text-stone-700 dark:text-stone-200 border border-stone-500/35 rounded-lg focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-yellow-600 dark:focus:border-yellow-700 placeholder:text-stone-400 dark:placeholder:text-stone-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 dark:invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-700 peer',
+          'peer w-full rounded-lg border border-stone-500/35 px-2.5 py-2 font-medium text-stone-700 placeholder:text-stone-400 focus:border-yellow-600 focus:outline-none focus:ring-0 focus:ring-offset-0 dark:bg-stone-800 dark:text-stone-200 dark:placeholder:text-stone-500 dark:focus:border-yellow-700 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 dark:invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-700',
           className,
-          disabled && 'opacity-50 cursor-not-allowed'
+          disabled && 'cursor-not-allowed opacity-50',
         )}
         ref={ref}
         placeholder={placeholder}
@@ -57,7 +57,7 @@ export default function Component({
       />
 
       {validationMessage && (
-        <span className='text-sm font-medium text-red-600 dark:text-red-500 right-3 absolute -top-0 hidden peer-[&:not(:placeholder-shown):not(:focus):invalid]:block'>
+        <span className='absolute -top-0 right-3 hidden text-sm font-medium text-red-600 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block dark:text-red-500'>
           {validationMessage}
         </span>
       )}

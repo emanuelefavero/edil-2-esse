@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import EstimateForm from './EstimateForm'
 
 describe('EstimateForm client side validation', () => {
@@ -15,10 +15,10 @@ describe('EstimateForm client side validation', () => {
 
     const nameValidationMessage = screen.getByText(/(inserisci il tuo nome)/i)
     const emailValidationMessage = screen.getByText(
-      /(inserisci un email valida)/i
+      /(inserisci un email valida)/i,
     )
     const messageValidationMessage = screen.getByText(
-      /(inserisci un messaggio)/i
+      /(inserisci un messaggio)/i,
     )
 
     expect(nameValidationMessage).toBeVisible()
@@ -38,7 +38,7 @@ describe('EstimateForm client side validation', () => {
 
     // Check if validation message is visible
     const phoneValidationMessage = screen.getByText(
-      /(inserisci un numero valido)/i
+      /(inserisci un numero valido)/i,
     )
     expect(phoneValidationMessage).toBeVisible()
   })
@@ -53,7 +53,7 @@ describe('EstimateForm client side validation', () => {
     // Check that the email is invalid and the validation message is visible
     expect(emailInput.checkValidity()).toBe(false)
     const emailValidationMessage = screen.getByText(
-      /inserisci un email valida/i
+      /inserisci un email valida/i,
     )
     expect(emailValidationMessage).toBeVisible()
 
