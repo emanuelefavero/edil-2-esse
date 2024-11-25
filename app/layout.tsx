@@ -40,7 +40,7 @@ export default function RootLayout({
         <Footer />
       </body>
 
-      <Script src='/scrollIntoView.js' />
+      <Script src='/js/scrollIntoView.js' />
     </html>
   )
 }
