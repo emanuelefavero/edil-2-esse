@@ -3,6 +3,7 @@ import FullScreenPattern from '@/components/FullScreenPattern'
 import Header from '@/components/Header'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Script from 'next/script'
 import './globals.css'
 
 const geistSans = localFont({
@@ -38,6 +39,8 @@ export default function RootLayout({
 
         <Footer />
       </body>
+
+      <Script src='/scrollIntoView.js' />
     </html>
   )
 }
