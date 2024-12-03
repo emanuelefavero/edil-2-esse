@@ -32,7 +32,7 @@ The website is built with Next.js (React framework), Resend for handling emails,
 To run the website locally, clone the repository and run the following commands:
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 npm run dev
 ```
 
