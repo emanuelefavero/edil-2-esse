@@ -28,7 +28,7 @@ export default function Component({
   disabled = false,
   className,
   autocomplete = 'on',
-  maxLength = 100,
+  maxLength = 50,
   minLength = 2,
   validationMessage,
 }: Props) {

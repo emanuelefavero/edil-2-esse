@@ -5,7 +5,7 @@ import {
   createEstimateRequestConfirmationEmail,
   createEstimateRequestEmail,
 } from '@/utils/emails'
-import { isValidEmail, isValidPhoneNumber } from '@/utils/validation'
+import { isValidName, isValidEmail, isValidPhoneNumber } from '@/utils/validation'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { Resend } from 'resend'
@@ -25,6 +25,22 @@ export async function sendEstimateRequestEmail(formData: FormData) {
   // * Validate form data
   if (!name || !email || !message) {
     throw new Error('Required form fields are missing.')
+  }
+
+  if (name.length > 50) {
+    throw new Error('Name is too long.')
+  }
+
+  if (email.length > 50) {
+    throw new Error('Email is too long.')
+  }
+
+  if (phone && phone.length > 50) {
+    throw new Error('Phone number is too long.')
+  }
+
+  if (!isValidName(name)) {
+    throw new Error('Invalid name.')
   }
 
   if (!isValidEmail(email)) {

@@ -1,3 +1,9 @@
+// Validate name
+export function isValidName(name: string): boolean {
+  const nameRegex = /^[a-zA-ZÀ-ÿ\s\-']{2,50}$/
+  return nameRegex.test(name)
+}
+
 // Validate email
 export function isValidEmail(email: string): boolean {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/

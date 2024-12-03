@@ -18,7 +18,6 @@ export default function Component() {
             label='Nome'
             placeholder='Il tuo nome'
             validationMessage='Inserisci il tuo nome'
-            maxLength={50}
             pattern="^[a-zA-ZÀ-ÿ\s\-']{2,50}$"
             required
           />
@@ -36,7 +35,6 @@ export default function Component() {
             label='Email'
             placeholder='La tua email'
             validationMessage='Inserisci un email valida'
-            maxLength={50}
             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             required
           />
